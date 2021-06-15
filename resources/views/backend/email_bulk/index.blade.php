@@ -9,6 +9,10 @@
             <div class="card">
                 <div class="card-header">
                     <strong>Email Bulk&nbsp;</strong>
+
+                    <div class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">Add Email</div>
+
+
                 </div><!--card-header-->
 
                 <div class="card-body">
@@ -29,6 +33,46 @@
             </div><!--card-->
         </div><!--col-->
     </div><!--row-->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="{{route('admin.emailbulk.add_email')}}" method="post">
+                    {{csrf_field()}}
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Email</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="category">
+                                <option value="School">School</option>
+                                <option value="Companies">Companies</option>
+                                <option value="Shops">Shops</option>
+                                <option value="Local Business">Local Business</option>
+                            </select>
+                        </div>
+                        <textarea class="form-control" name="description" rows="4"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add Email</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript">
         $(function () {

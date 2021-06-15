@@ -14,6 +14,11 @@ class EmailBuilkController extends Controller
         return view('backend.email_bulk.index');
     }
 
+    public function add_email(Request $request)
+    {
+        dd($request);
+    }
+
     public function GetDetableDetails()
     {
         $category = EmailBuilk::all();
