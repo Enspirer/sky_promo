@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\EmailBuilkController;
-use App\Http\Controllers\ImportExcel\ImportExcelController;
+use App\Http\Controllers\Backend\CampaignController;
 
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
@@ -12,6 +12,7 @@ Route::get('emailbuilk', [EmailBuilkController::class, 'index'])->name('emailbul
 Route::get('emailbuilk/getdetails', [EmailBuilkController::class, 'GetDetableDetails'])->name('emailbulk.GetDetableDetails');
 Route::post('emailbuilk/insert', [EmailBuilkController::class, 'add_email'])->name('emailbulk.add_email');
 
-// Route::get('emailbuilk/export-excel', [ImportExcelController::class, 'export'])->name('emailbulk.export');
 
-// Route::get('emailbuilk/export-excel', 'ImportExcel\ImportExcelController@export');
+Route::get('campaign', [CampaignController::class, 'index'])->name('campaign.index');
+Route::get('campaign/create', [CampaignController::class, 'create'])->name('campaign.create');
+Route::post('campaign/create', [CampaignController::class, 'store'])->name('campaign.store');
