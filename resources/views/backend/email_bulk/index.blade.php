@@ -12,6 +12,10 @@
 
                     <div class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">Add Email</div>
 
+                    <div class="btn btn-warning pull-right" data-toggle="modal" data-target="#Modalimport">Import File</div>
+        
+                     <a class="btn btn-success ms-4" href="{{ url('export-excel') }}"> 
+                 Export File</a>
 
                 </div><!--card-header-->
 
@@ -50,7 +54,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Email</label>
                             <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="form-group">
@@ -73,6 +77,48 @@
             </div>
         </div>
     </div>
+
+
+     <!-- Modal Import-->
+     <div class="modal fade" id="Modalimport" tabindex="-1" role="dialog" aria-labelledby="ModalimportlLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="{{ url('import-excel') }}" method="post" name="importform" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalimportlLabel">Import File</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>CSV/Excel</label>
+                            <input type="file" class="form-control" name="import_file" required>
+                        </div>
+                        
+                        <!-- <form action="{{ url('import-excel') }}" method="POST" name="importform" enctype="multipart/form-data">
+                @csrf
+                <input type="file" name="import_file" class="form-control">
+                <br>
+                <button class="btn btn-success">Import File</button>
+                <a class="btn btn-info ms-4" href="{{ url('export-excel') }}"> 
+                 Export File</a>
+            </form> -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
 
     <script type="text/javascript">
         $(function () {

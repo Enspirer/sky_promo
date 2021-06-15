@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\LanguageController;
 
+// Route::get('export-excel', 'ImportExcel\ImportExcelController@export');
+Route::get('export-excel', 'ImportExportExcel\ImportExportExcelController@export');
+
 /*
  * Global Routes
  * Routes that are used between both frontend and backend.

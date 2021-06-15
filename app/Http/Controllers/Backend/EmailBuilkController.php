@@ -16,7 +16,24 @@ class EmailBuilkController extends Controller
 
     public function add_email(Request $request)
     {
-        dd($request);
+        // dd($request);
+
+        $request->validate([
+            'email' => 'required',
+            'description' => 'required',
+            'category' => 'required'
+        ]);
+
+        $addemail = new EmailBuilk;
+        $addemail->email=$request->email;
+        $addemail->description=$request->description;
+        $addemail->category=$request->category;
+
+        $addemail->save();
+
+        return back();
+                            
+
     }
 
     public function GetDetableDetails()

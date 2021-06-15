@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EmailBuilk extends Model
+class Contact extends Model
 {
     protected $fillable = [
         'id', 'email', 'created_at'
