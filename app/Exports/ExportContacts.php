@@ -12,6 +12,6 @@ class ExportContacts implements FromCollection
     */
     public function collection()
     {
-        return EmailBuilk::all('id','email','description');
+        return EmailBuilk::all('id','email','description','category');
     }
 }

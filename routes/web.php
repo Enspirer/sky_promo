@@ -3,6 +3,7 @@
 use App\Http\Controllers\LanguageController;
 
 // Route::get('export-excel', 'ImportExcel\ImportExcelController@export');
+Route::post('import-excel', 'ImportExportExcel\ImportExportExcelController@import');
 Route::get('export-excel', 'ImportExportExcel\ImportExportExcelController@export');
 
 /*

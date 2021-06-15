@@ -16,3 +16,4 @@ Route::post('emailbuilk/insert', [EmailBuilkController::class, 'add_email'])->na
 Route::get('campaign', [CampaignController::class, 'index'])->name('campaign.index');
 Route::get('campaign/create', [CampaignController::class, 'create'])->name('campaign.create');
 Route::post('campaign/create', [CampaignController::class, 'store'])->name('campaign.store');
+

@@ -9,6 +9,7 @@ use App\Exports\ExportContacts;
 use Maatwebsite\Excel\Facades\Excel;
 use DB;
 use App\Models\EmailBuilk;
+use App\Contact;
 
 class ImportExportExcelController extends Controller
 {
@@ -18,7 +19,7 @@ class ImportExportExcelController extends Controller
             'import_file' => 'required'
         ]);
         Excel::import(new ImportContacts, request()->file('import_file'));
-        return back()->with('success', 'Contacts imported successfully.');
+        return back();
     }
 
     public function export() 
