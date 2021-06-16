@@ -40,11 +40,14 @@
 
 
 
-    <!-- Modal -->
+    <!-- Modal insert -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+         
                 <form action="{{route('admin.emailbulk.add_email')}}" method="post">
+
+                
                     {{csrf_field()}}
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Add Email</h5>
@@ -55,22 +58,67 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" name="email" required>
+                            <input type="email" class="form-control" name="email"  required>
                         </div>
                         <div class="form-group">
                             <label>Category</label>
-                            <select class="form-control" name="category">
+                            <select class="form-control" name="category" >
                                 <option value="School">School</option>
                                 <option value="Companies">Companies</option>
                                 <option value="Shops">Shops</option>
                                 <option value="Local Business">Local Business</option>
                             </select>
                         </div>
-                        <textarea class="form-control" name="description" rows="4"></textarea>
+                        <textarea class="form-control" name="description"  rows="4"></textarea>
                     </div>
                     <div class="modal-footer">
+                        
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Add Email</button>
+                        <input type="submit" class="btn btn-primary" value="Add Email">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal edit -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <span id="form_result"></span>
+                <form action="{{route('admin.emailbulk.update_email')}}" method="post">
+
+                   
+                    {{csrf_field()}}
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">Edit Email</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="category" id="category">
+                                <option value="School">School</option>
+                                <option value="Companies">Companies</option>
+                                <option value="Shops">Shops</option>
+                                <option value="Local Business">Local Business</option>
+                            </select>
+                        </div>
+                        <textarea class="form-control" name="description" id="description" rows="4"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <input type="hidden" name="action" id="action" value="Add" /> -->
+                        <input type="hidden" name="hidden_id" id="hidden_id" />
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" name="action_button" id="action_button" value="Submit">
                     </div>
                 </form>
 
@@ -97,19 +145,43 @@
                             <input type="file" class="form-control" name="import_file" required>
                         </div>
                         
-                        <!-- <form action="{{ url('import-excel') }}" method="POST" name="importform" enctype="multipart/form-data">
-                @csrf
-                <input type="file" name="import_file" class="form-control">
-                <br>
-                <button class="btn btn-success">Import File</button>
-                <a class="btn btn-info ms-4" href="{{ url('export-excel') }}"> 
-                 Export File</a>
-            </form> -->
+                       
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Modal delete email-->
+     <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="ModalDeleteLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form name="importform" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="ModalDeleteLabel">Confirmation</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <h5>Are you sure you want to remove this email?</h5>
+                        </div>
+                        
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" name="ok_button" id="ok_button">Delete</button>
+                       
                     </div>
                 </form>
 
@@ -133,6 +205,67 @@
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
+
+
+            // $('#create_record').click(function(){
+            // $('.modal-title').text('Add Email');
+            // $('#action_button').val('Add');
+            // $('#action').val('Add');
+            // $('#form_result').html('');
+
+            // $('#exampleModal').modal('show');
+            // });
+
+
+            $(document).on('click', '.edit', function(){
+
+            var id = $(this).attr('id');
+            $('#form_result').html('');
+            $.ajax({
+            url :"edit/"+id,
+            
+            dataType:"json",
+            success:function(data)
+            {
+                $('#email').val(data.result.email);
+                $('#category').val(data.result.category);
+                $('#description').val(data.result.description);
+                $('#hidden_id').val(id);
+                // $('.modal-title').text('Edit Record');
+                // $('#action_button').val('Edit');
+                // $('#action').val('Edit');
+                $('#editModal').modal('show');
+            }
+            })
+            });    
+
+          
+            var user_id;
+
+            $(document).on('click', '.delete', function(){
+            user_id = $(this).attr('id');
+            $('#confirmModal').modal('show');
+            });
+
+            $('#ok_button').click(function(){
+            $.ajax({
+            url:"delete/"+user_id,
+            beforeSend:function(){
+                // $('#ok_button').text('Deleting...');
+            },
+            success:function(data)
+            {
+                setTimeout(function(){
+                $('#confirmModal').modal('hide');
+                $('#villadatatable').DataTable().ajax.reload();
+                // alert('Email Deleted');
+                });
+            }
+            })
+            });
+
+
+
         });
     </script>
 

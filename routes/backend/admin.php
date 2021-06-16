@@ -11,6 +11,8 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 Route::get('emailbuilk', [EmailBuilkController::class, 'index'])->name('emailbulk.index');
 Route::get('emailbuilk/getdetails', [EmailBuilkController::class, 'GetDetableDetails'])->name('emailbulk.GetDetableDetails');
 Route::post('emailbuilk/insert', [EmailBuilkController::class, 'add_email'])->name('emailbulk.add_email');
+Route::post('emailbuilk/update', [EmailBuilkController::class, 'update_email'])->name('emailbulk.update_email');
+// Route::get('emailbuilk/destroy/{id}', [EmailBuilkController::class, 'destroy'])->name('emailbulk.destroy');
 
 
 Route::get('campaign', [CampaignController::class, 'index'])->name('campaign.index');
