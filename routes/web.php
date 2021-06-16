@@ -7,8 +7,9 @@ Route::post('import-excel', 'ImportExportExcel\ImportExportExcelController@impor
 Route::get('export-excel', 'ImportExportExcel\ImportExportExcelController@export');
 
 Route::get('admin/edit/{id}', 'Backend\EmailBuilkController@edit');
-
 Route::get('admin/delete/{id}', 'Backend\EmailBuilkController@destroy');
+
+Route::get('pixel', 'Frontend\ImageTrackerController@track_image');
 
 /*
  * Global Routes
