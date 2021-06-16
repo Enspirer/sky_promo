@@ -16,6 +16,10 @@ Breadcrumbs::for('admin.campaign.create', function ($trail) {
     $trail->push('Campaign Create', route('admin.campaign.create'));
 });
 
+Breadcrumbs::for('admin.campaign.show_statics', function ($trail) {
+    $trail->push('Campaign Static', route('admin.campaign.show_statics',1));
+});
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
