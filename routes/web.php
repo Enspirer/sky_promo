@@ -6,6 +6,10 @@ use App\Http\Controllers\LanguageController;
 Route::post('import-excel', 'ImportExportExcel\ImportExportExcelController@import');
 Route::get('export-excel', 'ImportExportExcel\ImportExportExcelController@export');
 
+Route::get('admin/edit/{id}', 'Backend\EmailBuilkController@edit');
+
+Route::get('admin/delete/{id}', 'Backend\EmailBuilkController@destroy');
+
 /*
  * Global Routes
  * Routes that are used between both frontend and backend.
