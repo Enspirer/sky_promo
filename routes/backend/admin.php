@@ -18,4 +18,6 @@ Route::post('emailbuilk/update', [EmailBuilkController::class, 'update_email'])-
 Route::get('campaign', [CampaignController::class, 'index'])->name('campaign.index');
 Route::get('campaign/create', [CampaignController::class, 'create'])->name('campaign.create');
 Route::post('campaign/create', [CampaignController::class, 'store'])->name('campaign.store');
+Route::get('campaign/getdetails', [CampaignController::class, 'getDetails'])->name('campaign.getdetails');
+Route::get('campaign/show_statics/{id}', [CampaignController::class, 'show_statics'])->name('campaign.show_statics');
 

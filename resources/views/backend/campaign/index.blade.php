@@ -16,7 +16,7 @@
                         <thead>
                         <tr>
                             <th scope="col">#ID</th>
-                            <th scope="col">Email</th>
+                            <th scope="col">Campaign Name</th>
                             <th scope="col">Created At</th>
                             <th scope="col">Option</th>
                         </tr>
@@ -35,13 +35,12 @@
 
     <script type="text/javascript">
         $(function () {
-
             var table = $('#villadatatable').DataTable({
                 processing: false,
-                ajax: "{{route('admin.emailbulk.GetDetableDetails')}}",
+                ajax: "{{route('admin.campaign.getdetails')}}",
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'email', name: 'email'},
+                    {data: 'campaign_name', name: 'campaign_name'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
