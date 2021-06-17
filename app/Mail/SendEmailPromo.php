@@ -12,17 +12,15 @@ use Illuminate\Queue\InteractsWithQueue;
 
 class SendEmailPromo extends Mailable
 {
-    use Dispatchable,InteractsWithQueue, Queueable, SerializesModels;
-    protected $send_mail;
-
+    use  Queueable, SerializesModels;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($send_mail)
+    public function __construct()
     {
-        $this->send_mail = $send_mail;
+
     }
 
     /**
