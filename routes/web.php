@@ -12,6 +12,8 @@ Route::get('admin/delete/{id}', 'Backend\EmailBuilkController@destroy');
 // Route::get('pixel', 'Frontend\ImageTrackerController@track_image');
 Route::get('pixel/{id}/{image_id}', 'Frontend\ImageTrackerController@track_image');
 
+Route::get('pixel/{id}', 'Frontend\ImageTrackerController@track_email_send');
+
 /*
  * Global Routes
  * Routes that are used between both frontend and backend.
