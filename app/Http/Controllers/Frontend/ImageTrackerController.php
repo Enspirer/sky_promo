@@ -37,6 +37,7 @@ class ImageTrackerController extends Controller
                 'email_view_count'=> DB::raw('email_view_count+1')
                 ]);
 
+
                 // CampaignStatics::whereId($id)->update($countviews->toArray());
 
                 return response( file_get_contents('./files/email_promo/'.$jsondata->image) ) ->header('Content-Type','image/png');
