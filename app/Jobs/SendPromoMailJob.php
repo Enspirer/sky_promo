@@ -2,15 +2,16 @@
 
 namespace App\Jobs;
 
-use App\Mail\SendEmailPromo;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use App\Mail\SendEmailDemo;
 use Mail;
+use App\Models\EmailBuilk;
+use App\Mail\SendEmailPromo;
 use DB;
+use Matrix\Exception;
 
 class SendPromoMailJob implements ShouldQueue
 {
@@ -34,16 +35,38 @@ class SendPromoMailJob implements ShouldQueue
      */
     public function handle()
     {
-        foreach(range(1,100000) as $index) {
-            $randomString = self::generateRandomString(10);
-            DB::table('email_builks')->insert([
-                'email' => $randomString.'@yopmail.com',
-                'description' => '',
-                'category' => 'sdfsdfds'
-            ]);
-        }
-//        $email = new SendEmailPromo();
+
+
 //        Mail::to($this->send_mail)->send($email);
+
+        EmailBuilk::chunk(100, function ($emailbulk) {
+            foreach ($emailbulk as $emailbulks)
+            {
+                    try{
+                        sleep(1);
+                        $email = new SendEmailPromo(1);
+                        Mail::to($emailbulks->email)->send($email);
+                        DB::table('campaign_statics')->where('campaign_id',1)->update([
+                            'email_send_count' => DB::raw('email_send_count+1')
+                        ]);
+                    }catch (Exception $exception)
+                    {
+                        continue;
+
+                    }
+            }
+        });
+
+//        foreach(range(1,100000) as $index) {
+//            $randomString = self::generateRandomString(10);
+//            DB::table('email_builks')->insert([
+//                'email' => $randomString.'@yopmail.com',
+//                'description' => '',
+//                'category' => 'sdfsdfds'
+//            ]);
+//        }
+//        $email = new SendEmailPromo();
+//
     }
 
     public static function generateRandomString($length = 10) {

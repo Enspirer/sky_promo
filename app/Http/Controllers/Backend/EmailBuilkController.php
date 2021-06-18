@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DataTables;
 use App\Models\EmailBuilk;
+use DB;
 
 class EmailBuilkController extends Controller
 {
@@ -23,6 +24,12 @@ class EmailBuilkController extends Controller
             'description' => 'required',
             'category' => 'required'
         ]);
+
+
+
+
+
+
 
         
 
@@ -47,8 +54,6 @@ class EmailBuilkController extends Controller
             'description' => 'required',
             'category' => 'required'
         ]);
-
-        
 
         $updateemail = new EmailBuilk;
         $updateemail->email=$request->email;
@@ -112,8 +117,8 @@ class EmailBuilkController extends Controller
     {
         if($request->ajax())
         {
-            $data = EmailBuilk::latest()->get();
-            return DataTables::of($data)
+            $lsime = DB::table('email_builks')->orderBy('id');
+            return DataTables::of($lsime)
                     ->addColumn('action', function($data){
                         $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
                         $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm">Delete</button>';
@@ -122,7 +127,6 @@ class EmailBuilkController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return back();
     }
 
     public function edit($id)

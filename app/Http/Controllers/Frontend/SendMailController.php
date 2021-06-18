@@ -12,21 +12,8 @@ class SendMailController extends Controller
 {
     public function index()
     {
+
         dispatch(new SendPromoMailJob('ssss'));
-
-
-
-//
-
-//        EmailBuilk::chunk(100, function ($emailbulk) {
-//            foreach ($emailbulk as $emailbulks)
-//            {
-//                dispatch(new SendPromoMailJob($emailbulks));
-//            }
-//        });
-//        dd('send mail successfully !!');
-
-
     }
 
     public static function generateRandomString($length = 10) {

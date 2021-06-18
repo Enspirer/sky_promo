@@ -194,10 +194,10 @@
 
     <script type="text/javascript">
         $(function () {
-
             var table = $('#villadatatable').DataTable({
-                processing: false,
+                processing: true,
                 ajax: "{{route('admin.emailbulk.GetDetableDetails')}}",
+                serverSide: true,
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'email', name: 'email'},
