@@ -5,9 +5,11 @@ use App\Http\Controllers\LanguageController;
 // Route::get('export-excel', 'ImportExcel\ImportExcelController@export');
 Route::post('import-excel', 'ImportExportExcel\ImportExportExcelController@import');
 Route::get('export-excel', 'ImportExportExcel\ImportExportExcelController@export');
-
 Route::get('admin/edit/{id}', 'Backend\EmailBuilkController@edit');
 Route::get('admin/delete/{id}', 'Backend\EmailBuilkController@destroy');
+
+Route::post('import-company', 'ImportExportExcel\ImportExportExcelController@importcompany');
+Route::get('export-company', 'ImportExportExcel\ImportExportExcelController@exportcompany');
 
 // Route::get('pixel', 'Frontend\ImageTrackerController@track_image');
 Route::get('pixel/{id}/{image_id}', 'Frontend\ImageTrackerController@track_image');

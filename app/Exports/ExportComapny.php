@@ -2,18 +2,17 @@
 
 namespace App\Exports;
 
-use App\Models\EmailBuilk;
+use App\Models\CompanyDetails;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
-class ExportContacts implements FromCollection
+
+class ExportComapny implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
     */
     public function collection()
     {
-        return EmailBuilk::all('id','email','description','category');
+        return CompanyDetails::all('id','company_name','company_description');
     }
 }
-
-

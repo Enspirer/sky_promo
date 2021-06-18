@@ -3,6 +3,8 @@
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\EmailBuilkController;
 use App\Http\Controllers\Backend\CampaignController;
+use App\Http\Controllers\Backend\CompaniesController;
+use App\Http\Controllers\ImportExportExcel\ImportExportExcelController;
 
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
@@ -20,4 +22,13 @@ Route::get('campaign/create', [CampaignController::class, 'create'])->name('camp
 Route::post('campaign/create', [CampaignController::class, 'store'])->name('campaign.store');
 Route::get('campaign/getdetails', [CampaignController::class, 'getDetails'])->name('campaign.getdetails');
 Route::get('campaign/show_statics/{id}', [CampaignController::class, 'show_statics'])->name('campaign.show_statics');
+
+Route::get('companies', [CompaniesController::class, 'index'])->name('companies.index');
+Route::post('companies/insert', [CompaniesController::class, 'add_company'])->name('companies.add_company');
+Route::get('companies/getdetails', [CompaniesController::class, 'GetTableDetails'])->name('companies.GetTableDetails');
+Route::post('companies/update', [CompaniesController::class, 'update_company'])->name('companies.update_company');
+Route::get('companies/edit/{id}', [CompaniesController::class, 'edit'])->name('companies.edit');
+Route::get('companies/delete/{id}', [CompaniesController::class, 'destroy'])->name('companies.destroy');
+// Route::post('companies/import', [CompaniesController::class, 'add_company'])->name('companies.add_company');
+// Route::get('companies/export', [ImportExportExcelController::class, 'exportcompany'])->name('companies.exportcompany');
 
