@@ -51,6 +51,7 @@ class SendPromoMailJob implements ShouldQueue
                         ]);
                     }catch (Exception $exception)
                     {
+                        sleep(1800);
                         continue;
 
                     }
