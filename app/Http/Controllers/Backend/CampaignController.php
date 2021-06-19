@@ -7,6 +7,8 @@ use App\Models\CampaignStatics;
 use App\Models\EmailCampaign;
 use Illuminate\Http\Request;
 use DataTables;
+use App\Models\CompanyDetails;
+use DB;
 
 
 class CampaignController extends Controller
@@ -18,7 +20,15 @@ class CampaignController extends Controller
 
     public function create()
     {
-        return view('backend.campaign.creator');
+        $data = CompanyDetails::all();
+
+        // $company = DB::table('company_details')->select('id','company_name')->get();
+
+        return view('backend.campaign.creator',[
+            'companies' => $data 
+        ]);
+        // return view('backend.campaign.creator', ['data'=>$data]);
+        // return view('backend.campaign.creator');
     }
 
 
@@ -51,8 +61,8 @@ class CampaignController extends Controller
             $image_url1 = null;
         }
         $company_name1 = [
-            'company_name' => $request->company_name1,
-            'advertisement_name' => $request->company_name1,
+            'company_id' => $request->company_name1,
+            'advertisement_name' => $request->advertiment_name1,
             'image' => $image_url1,
         ];
         if($request->file('email_image2'))
@@ -64,8 +74,8 @@ class CampaignController extends Controller
             $image_url2 = null;
         }
         $company_name2 = [
-            'company_name' => $request->company_name2,
-            'advertisement_name' => $request->company_name2,
+            'company_id' => $request->company_name2,
+            'advertisement_name' => $request->advertiment_name2,
             'image' => $image_url2,
         ];
         if($request->file('email_image3'))
@@ -77,8 +87,8 @@ class CampaignController extends Controller
             $image_url = null;
         }
         $company_name3 = [
-            'company_name' => $request->company_name3,
-            'advertisement_name' => $request->company_name3,
+            'company_id' => $request->company_name3,
+            'advertisement_name' => $request->advertiment_name3,
             'image' => $image_url,
         ];
         $out_json = [
@@ -106,4 +116,10 @@ class CampaignController extends Controller
     {
         return view('backend.campaign.show_statics');
     }
+
+    // public function show_companies()
+    // {
+    //     $data = CompanyDetails::all();
+    //     return view('backend.campaign.creator', ['data'=>$data]);
+    // }
 }

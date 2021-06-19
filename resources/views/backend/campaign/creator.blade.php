@@ -29,9 +29,18 @@
                                 <label>Adaverise Image (300p * 400px) </label>
                                 <input type="file" class="form-control-file" name="email_image1">
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>Company Name</label>
                                 <input type="text" class="form-control" name="company_name1" required>
+                            </div> -->
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <select class="form-control" name="company_name1">
+                                    @foreach($companies as $com)
+                                        <option value=" {{$com->id}} "> {{$com->company_name}} </option>
+                                    @endforeach
+                                    
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Advertisement Name</label>
@@ -49,7 +58,12 @@
                             </div>
                             <div class="form-group">
                                 <label>Company Name</label>
-                                <input type="text" class="form-control" name="company_name2" required>
+                                <select class="form-control" name="company_name2">
+                                    @foreach($companies as $com)
+                                        <option value=" {{$com->id}} "> {{$com->company_name}} </option>
+                                    @endforeach
+                                    
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Advertisement Name</label>
@@ -67,7 +81,12 @@
                             </div>
                             <div class="form-group">
                                 <label>Company Name</label>
-                                <input type="text" class="form-control" name="company_name3" required>
+                                <select class="form-control" name="company_name3">
+                                    @foreach($companies as $com)
+                                        <option value=" {{$com->id}} "> {{$com->company_name}} </option>
+                                    @endforeach
+                                    
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Advertisement Name</label>
