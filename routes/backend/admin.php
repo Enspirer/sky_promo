@@ -22,6 +22,9 @@ Route::get('campaign/create', [CampaignController::class, 'create'])->name('camp
 Route::post('campaign/create', [CampaignController::class, 'store'])->name('campaign.store');
 Route::get('campaign/getdetails', [CampaignController::class, 'getDetails'])->name('campaign.getdetails');
 Route::get('campaign/show_statics/{id}', [CampaignController::class, 'show_statics'])->name('campaign.show_statics');
+Route::get('campaign/edit/{id}', [CampaignController::class, 'edit'])->name('campaign.edit');
+Route::post('campaign/update', [CampaignController::class, 'update'])->name('campaign.update');
+Route::get('campaign/delete/{id}', [CampaignController::class, 'destroy'])->name('campaign.destroy');
 
 Route::get('companies', [CompaniesController::class, 'index'])->name('companies.index');
 Route::post('companies/insert', [CompaniesController::class, 'add_company'])->name('companies.add_company');

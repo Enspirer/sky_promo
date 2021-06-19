@@ -20,6 +20,10 @@ Breadcrumbs::for('admin.campaign.show_statics', function ($trail) {
     $trail->push('Campaign Static', route('admin.campaign.show_statics',1));
 });
 
+Breadcrumbs::for('admin.campaign.edit', function ($trail) {
+    $trail->push('Campaign Edit', route('admin.campaign.edit',1));
+});
+
 Breadcrumbs::for('admin.companies.index', function ($trail) {
     $trail->push('Companies', route('admin.companies.index'));
 });
