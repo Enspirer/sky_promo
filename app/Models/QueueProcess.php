@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class QueueProcess extends Model
 {
-    // protected $fillable = [
-    //     'queue'
-    // ];
+    protected $fillable = [
+        'id','queue', 'payload', 'attempts', 'reserved_at'
+    ];
 }
