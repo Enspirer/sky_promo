@@ -19,13 +19,29 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Status</label>
-                                        <input type="text" value="" class="form-control" readonly>
-                                    </div>
+                                        
+                                        
+                                        @if($campaigns->status =='Complete') 
+                                                <h4 style="color: #32CD32">Complete</h4>
+                                            @elseif($campaigns->status =='Pending')        
+                                                <h4 style="color: #0269A4">Pending</h4>
+                                            @elseif($campaigns->status =='Processing')
+                                                <div class="">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:100%">Processing..</div>    
+                                                </div>
+                                            @else
+                                                <h4 style="color: #960018">Failed</h4>
+                                        @endif
+                                            
+                                        
+                                   
+                                           
+                                    </div><br>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Email Count</label>
-                                                <input type="number" value="0" class="form-control">
+                                                <input type="number" value="{{ $emailcount }}" class="form-control" readonly>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -37,14 +53,55 @@
                                     </div>
 
                                     <div class="card">
-                                        <div class="card-header">
-                                            Email Details
-                                        </div>
+                                        
                                         <div class="card-body">
-                                            <div class="">
-                                                <div style="background-image: url('');height: 270px;background-repeat: no-repeat;background-size: cover;"></div>
+                                            <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- <img src="{{url('files/email_promo/',json_decode($campaigns->json_data)[0]->image)}}" style="height: 150px;" alt="" > -->
+                                                <div class="" style="background-image: url('{{url('files/email_promo/',json_decode($campaigns->json_data)[0]->image)}}'); height: 100px; background-position: center; background-size: cover; width: auto;">
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="col-md-8">
+                                                <div class="container">
+                                                <b>Advertisement Name:</b> {{ json_decode($campaigns->json_data)[0]->advertisement_name }}
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>                                        
+                                    </div><br>
+                                    <div class="card">
+                                        
+                                        <div class="card-body">
+                                            <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- <img src="{{url('files/email_promo/',json_decode($campaigns->json_data)[0]->image)}}" style="height: 150px;" alt="" > -->
+                                                <div class="" style="background-image: url('{{url('files/email_promo/',json_decode($campaigns->json_data)[1]->image)}}'); height: 100px; background-position: center; background-size: cover; width: auto;">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="container">
+                                                <b>Advertisement Name:</b> {{ json_decode($campaigns->json_data)[1]->advertisement_name }}
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>                                        
+                                    </div><br>
+                                    <div class="card">
+                                        
+                                        <div class="card-body">
+                                            <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- <img src="{{url('files/email_promo/',json_decode($campaigns->json_data)[0]->image)}}" style="height: 150px;" alt="" > -->
+                                                <div class="" style="background-image: url('{{url('files/email_promo/',json_decode($campaigns->json_data)[2]->image)}}'); height: 100px; background-position: center; background-size: cover; width: auto;">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="container">
+                                                <b>Advertisement Name:</b> {{ json_decode($campaigns->json_data)[2]->advertisement_name }}
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>                                        
                                     </div>
 
                                     <div class="card">
@@ -85,10 +142,10 @@
                                     type: 'pie',
                                     radius: '50%',
                                     data: [
-                                        {value: 1048, name: 'Send Failed'},
-                                        {value: 735, name: 'Sent Email'},
-                                        {value: 580, name: 'Read Count'},
-                                        {value: 484, name: 'Link Count'},
+                                        {value: {{ $statics->email_view_count }}, name: 'View Count'},                                                                              
+                                        {value: {{ $statics->email_send_count }}, name: 'Sent Count'},
+                                        {value: {{ $statics->unsubcibe_count }}, name: 'Unsubscribed Email'},
+                                        {value: {{ $statics->taget_email_count }}, name: 'Target Email'},
                                     ],
                                     emphasis: {
                                         itemStyle: {

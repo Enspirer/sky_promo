@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\CampaignStatics;
 use App\Models\EmailCampaign;
+use App\Models\EmailBuilk;
 use Illuminate\Http\Request;
 use DataTables;
 use App\Models\CompanyDetails;
@@ -186,7 +187,21 @@ class CampaignController extends Controller
 
     public function show_statics($id)
     {
-        return view('backend.campaign.show_statics');
+        $campaigns = EmailCampaign::where('id',$id)->first();
+     
+        $statics = CampaignStatics::where('campaign_id',$id)->first();
+
+        $emailcount = EmailBuilk::all()->count();
+        // dd($emailcount);
+
+
+        return view('backend.campaign.show_statics',[
+            'statics' => $statics,    
+            'campaigns' => $campaigns,
+            'emailcount' => $emailcount
+            
+        ]);   
+
     }
 
     public function edit($id)
