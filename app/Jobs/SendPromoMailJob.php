@@ -16,16 +16,16 @@ use Matrix\Exception;
 class SendPromoMailJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    protected $send_mail;
+    protected $id;
     /**
      * Create a new job instance.
      *
      * @return void
      */
 
-    public function __construct($send_mail)
+    public function __construct($id)
     {
-        $this->send_mail = $send_mail;
+        $this->id = $id;
     }
 
     /**
@@ -44,16 +44,15 @@ class SendPromoMailJob implements ShouldQueue
             {
                     try{
                         sleep(1);
-                        $email = new SendEmailPromo(1);
+                        $email = new SendEmailPromo($this->id);
                         Mail::to($emailbulks->email)->send($email);
-                        DB::table('campaign_statics')->where('campaign_id',1)->update([
+                        DB::table('campaign_statics')->where('campaign_id',$this->id)->update([
                             'email_send_count' => DB::raw('email_send_count+1')
                         ]);
                     }catch (Exception $exception)
                     {
                         sleep(1800);
                         continue;
-
                     }
             }
         });
