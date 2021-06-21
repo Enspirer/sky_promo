@@ -43,8 +43,12 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Advertisement Name</label>
+                                <label>Advertisement Name:</label>
                                 <input type="text" class="form-control" name="advertiment_name1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Link:</label>
+                                <input type="text" class="form-control" name="link1" required>
                             </div>
                         </div>
                     </div>
@@ -66,8 +70,12 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Advertisement Name</label>
+                                <label>Advertisement Name:</label>
                                 <input type="text" class="form-control" name="advertiment_name2" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Link:</label>
+                                <input type="text" class="form-control" name="link2" required>
                             </div>
                         </div>
                     </div>
@@ -89,8 +97,12 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Advertisement Name</label>
+                                <label>Advertisement Name:</label>
                                 <input type="text" class="form-control" name="advertiment_name3" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Link:</label>
+                                <input type="text" class="form-control" name="link3" required>
                             </div>
                         </div>
                     </div>

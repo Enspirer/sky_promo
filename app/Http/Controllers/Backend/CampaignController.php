@@ -69,6 +69,7 @@ class CampaignController extends Controller
             'company_id' => $request->company_name1,
             'advertisement_name' => $request->advertiment_name1,
             'image' => $image_url1,
+            'link' => $request->link1,
         ];
         if($request->file('email_image2'))
         {
@@ -82,6 +83,7 @@ class CampaignController extends Controller
             'company_id' => $request->company_name2,
             'advertisement_name' => $request->advertiment_name2,
             'image' => $image_url2,
+            'link' => $request->link2,
         ];
         if($request->file('email_image3'))
         {
@@ -95,6 +97,7 @@ class CampaignController extends Controller
             'company_id' => $request->company_name3,
             'advertisement_name' => $request->advertiment_name3,
             'image' => $image_url,
+            'link' => $request->link3,
         ];
         $out_json = [
             $company_name1,$company_name2,$company_name3

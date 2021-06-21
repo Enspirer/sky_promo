@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\EmailBuilkController;
 use App\Http\Controllers\Backend\CampaignController;
 use App\Http\Controllers\Backend\CompaniesController;
+use App\Http\Controllers\Backend\QueueProcessController;
 use App\Http\Controllers\ImportExportExcel\ImportExportExcelController;
 
 // All route names are prefixed with 'admin.'.
@@ -26,9 +27,10 @@ Route::get('campaign/edit/{id}', [CampaignController::class, 'edit'])->name('cam
 Route::post('campaign/update', [CampaignController::class, 'update'])->name('campaign.update');
 Route::get('campaign/delete/{id}', [CampaignController::class, 'destroy'])->name('campaign.destroy');
 
-
 Route::get('api_campaign', [CampaignController::class, 'index'])->name('campaign.index');
 
+Route::get('queue', [QueueProcessController::class, 'index'])->name('queue.index');
+Route::get('queue/getdetails', [QueueProcessController::class, 'GetTableDetails'])->name('queue.GetTableDetails');
 
 Route::get('companies', [CompaniesController::class, 'index'])->name('companies.index');
 Route::post('companies/insert', [CompaniesController::class, 'add_company'])->name('companies.add_company');

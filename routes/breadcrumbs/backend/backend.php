@@ -28,6 +28,10 @@ Breadcrumbs::for('admin.companies.index', function ($trail) {
     $trail->push('Companies', route('admin.companies.index'));
 });
 
+Breadcrumbs::for('admin.queue.index', function ($trail) {
+    $trail->push('Queue Process', route('admin.queue.index'));
+});
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
