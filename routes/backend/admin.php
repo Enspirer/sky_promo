@@ -23,6 +23,10 @@ Route::post('campaign/create', [CampaignController::class, 'store'])->name('camp
 Route::get('campaign/getdetails', [CampaignController::class, 'getDetails'])->name('campaign.getdetails');
 Route::get('campaign/show_statics/{id}', [CampaignController::class, 'show_statics'])->name('campaign.show_statics');
 
+
+Route::get('api_campaign', [CampaignController::class, 'index'])->name('campaign.index');
+
+
 Route::get('companies', [CompaniesController::class, 'index'])->name('companies.index');
 Route::post('companies/insert', [CompaniesController::class, 'add_company'])->name('companies.add_company');
 Route::get('companies/getdetails', [CompaniesController::class, 'GetTableDetails'])->name('companies.GetTableDetails');

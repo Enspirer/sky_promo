@@ -26,6 +26,13 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/campaign'))}}" href="">
+                    <i class="nav-icon fa fa-running"></i>
+                    Queue Process
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link {{active_class(Route::is('admin/companies'))}}" href="{{ route('admin.companies.index') }}">
                     
                     <i class="nav-icon fas fa-building"></i>
