@@ -104,14 +104,15 @@
                                         </div>                                        
                                     </div>
 
-                                    <div class="card">
+                                    <!-- <div class="card">
                                         <div class="card-body">
                                             <label>Message</label>
                                             <div class="">
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                    <br>
                                     <button type="submit" class="btn btn-primary">Start Campaign</button>
                                 </div>
                             </div>

@@ -26,9 +26,9 @@ Route::get('campaign/edit/{id}', [CampaignController::class, 'edit'])->name('cam
 Route::post('campaign/update', [CampaignController::class, 'update'])->name('campaign.update');
 Route::get('campaign/delete/{id}', [CampaignController::class, 'destroy'])->name('campaign.destroy');
 
-
 Route::get('api_campaign', [CampaignController::class, 'index'])->name('campaign.index');
 
+Route::get('queue', [QueueProcessController::class, 'index'])->name('queue.index');
 
 Route::get('companies', [CompaniesController::class, 'index'])->name('companies.index');
 Route::post('companies/insert', [CompaniesController::class, 'add_company'])->name('companies.add_company');

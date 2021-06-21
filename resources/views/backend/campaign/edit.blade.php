@@ -47,8 +47,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Advertisement Name</label>
-                                
                                 <input type="text" class="form-control" name="advertiment_name1" value="{{ json_decode($campaigns->json_data)[0]->advertisement_name  }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Link:</label>
+                                <input type="text" class="form-control" name="link1" value="{{ json_decode($campaigns->json_data)[0]->link  }}" required>
                             </div>
                         </div>
                     </div>
@@ -76,6 +79,10 @@
                                 <label>Advertisement Name</label>
                                 <input type="text" class="form-control" name="advertiment_name2" value="{{ json_decode($campaigns->json_data)[1]->advertisement_name  }}" required>
                             </div>
+                            <div class="form-group">
+                                <label>Link:</label>
+                                <input type="text" class="form-control" name="link2" value="{{ json_decode($campaigns->json_data)[1]->link  }}" required>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,6 +107,10 @@
                             <div class="form-group">
                                 <label>Advertisement Name</label>
                                 <input type="text" class="form-control" name="advertiment_name3" value="{{ json_decode($campaigns->json_data)[2]->advertisement_name  }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Link:</label>
+                                <input type="text" class="form-control" name="link3" value="{{ json_decode($campaigns->json_data)[2]->link  }}" required>
                             </div>
                         </div>
                     </div>
