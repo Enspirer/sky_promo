@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\EmailBuilkController;
 use App\Http\Controllers\Backend\CampaignController;
 use App\Http\Controllers\Backend\CompaniesController;
 use App\Http\Controllers\Backend\QueueProcessController;
+use App\Http\Controllers\Backend\SingleMailController;
 use App\Http\Controllers\ImportExportExcel\ImportExportExcelController;
 
 // All route names are prefixed with 'admin.'.
@@ -41,3 +42,8 @@ Route::get('companies/delete/{id}', [CompaniesController::class, 'destroy'])->na
 // Route::post('companies/import', [CompaniesController::class, 'add_company'])->name('companies.add_company');
 // Route::get('companies/export', [ImportExportExcelController::class, 'exportcompany'])->name('companies.exportcompany');
 
+Route::get('singlemail', [SingleMailController::class, 'index'])->name('singlemail.index');
+Route::get('singlemail/create', [SingleMailController::class, 'create'])->name('singlemail.create');
+Route::post('singlemail/create', [SingleMailController::class, 'store'])->name('singlemail.store');
+Route::get('singlemail/getdetails', [SingleMailController::class, 'getDetails'])->name('singlemail.getdetails');
+Route::get('singlemail/delete/{id}', [SingleMailController::class, 'destroy'])->name('singlemail.destroy');

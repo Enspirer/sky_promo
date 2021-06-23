@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\EmailCampaign;
 use App\Models\CampaignStatics;
+use App\Models\SingleCampaign;
+use App\Models\SingleCampaignStatics;
 use DB;
 use \App\Mail\SendEmailPromo;
 
@@ -43,11 +45,7 @@ class ImageTrackerController extends Controller
                 return response( file_get_contents('./files/email_promo/'.$jsondata->image) ) ->header('Content-Type','image/png');
                 
             }
-            // else {
-                
-            //         return view('errors.404');
-                   
-            // }
+            
         }              
                 
     }
@@ -87,4 +85,40 @@ class ImageTrackerController extends Controller
         // }              
                 
     }
+
+
+    public function single_track_image($id,$image_id)
+    {
+        
+        $countviews = new SingleCampaignStatics;
+          
+        $camp = SingleCampaign::whereId($id)->first();
+
+        $json_data = json_decode($camp->json_data); 
+        
+        foreach($json_data as $key => $jsondata){
+            
+            // dd($key);
+            if($key == $image_id){
+                
+                SingleCampaignStatics::where('campaign_id', $id)
+                ->update([
+                'read_count'=> DB::raw('read_count+1')
+                ]);
+
+                return response( file_get_contents('./files/single_mail/'.$jsondata->image) ) ->header('Content-Type','image/png');
+                
+            }
+            
+        }              
+                
+    }
+
+
+
+
+
+
+
+
 }

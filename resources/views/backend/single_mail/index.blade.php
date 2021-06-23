@@ -3,12 +3,13 @@
 @section('title', app_name() . ' | ' . __('strings.backend.dashboard.title'))
 
 @section('content')
-    <div class="row">
+    
+<div class="row">
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <strong>Email Campaign&nbsp;</strong>
-                    <a href="{{route('admin.campaign.create')}}" class="btn btn-primary pull-right">Create Campaign</a>
+                    <strong>Single Mail&nbsp;</strong>
+                    <a href="{{route('admin.singlemail.create')}}" class="btn btn-primary pull-right ml-4">Create Email</a>
                 </div>
 
                 <div class="card-body">
@@ -17,6 +18,8 @@
                         <tr>
                             <th scope="col">#ID</th>
                             <th scope="col">Campaign Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Created At</th>
                             <th scope="col">Option</th>
                         </tr>
@@ -29,7 +32,6 @@
             </div><!--card-->
         </div><!--col-->
     </div><!--row-->
-
 
     <!-- Modal delete email-->
     <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="ModalDeleteLabel" aria-hidden="true">
@@ -45,7 +47,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <h5>Are you sure you want to remove this Campaign?</h5>
+                            <h5>Are you sure you want to remove this Email Campaign?</h5>
                         </div>
                         
 
@@ -68,14 +70,18 @@
         $(function () {
             var table = $('#villadatatable').DataTable({
                 processing: false,
-                ajax: "{{route('admin.campaign.getdetails')}}",
+                ajax: "{{route('admin.singlemail.getdetails')}}",
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'campaign_name', name: 'campaign_name'},
+                    {data: 'description', name: 'description'},
+                    {data: 'status', name: 'status'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
+
+
 
             var user_id;
 
@@ -86,25 +92,25 @@
 
             $('#ok_button').click(function(){
                 $.ajax({
-                url:"campaign/delete/"+user_id,
+                url:"singlemail/delete/"+user_id,
                 beforeSend:function(){
-                    // $('#ok_button').text('Deleting...');
                 },
                 success:function(data)
                 {
                     setTimeout(function(){
                     $('#confirmModal').modal('hide');
-                    $('#villadatatable').DataTable().ajax.reload();
+                    $('#villadatatable').DataTable().ajax.reload();                    
                     // alert('Email Deleted');
                     });
                 }
                 })
             });
-    
+                
         });
 
-    </script>
+        
 
-
+        
+    </script>    
 
 @endsection
