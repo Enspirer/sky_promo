@@ -23,6 +23,7 @@ class SendEmailPromo extends Mailable
     public function __construct($id)
     {
         $this->id = $id;
+        // dd($this->id);
     }
 
     /**
@@ -35,4 +36,5 @@ class SendEmailPromo extends Mailable
         return $this->subject('Test Mail using Queue in Larvel 8')
             ->view('frontend.mail.sky_promo_email');
     }
+
 }

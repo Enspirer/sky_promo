@@ -13,8 +13,11 @@ Route::get('export-company', 'ImportExportExcel\ImportExportExcelController@expo
 
 // Route::get('pixel', 'Frontend\ImageTrackerController@track_image');
 Route::get('pixel/{id}/{image_id}', 'Frontend\ImageTrackerController@track_image');
-
 Route::get('pixel/{id}', 'Frontend\ImageTrackerController@track_email_send');
+
+Route::get('single-pixel/{id}/{image_id}', 'Frontend\ImageTrackerController@single_track_image');
+// Route::get('single-pixel/{id}', 'Frontend\ImageTrackerController@track_email_send');
+Route::get('single-pixel-url/{id}/{url_id}', 'Frontend\ImageTrackerController@single_track_url');
 
 /*
  * Global Routes

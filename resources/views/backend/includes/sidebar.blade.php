@@ -33,10 +33,16 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{active_class(Route::is('admin/companies'))}}" href="{{ route('admin.companies.index') }}">
-                    
+                <a class="nav-link {{active_class(Route::is('admin/companies'))}}" href="{{ route('admin.companies.index') }}">                    
                     <i class="nav-icon fas fa-building"></i>
                     Companies 
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/singlemail'))}}" href="{{ route('admin.singlemail.index') }}">                    
+                    <i class="nav-icon fas fa-envelope"></i>
+                    Single Mail 
                 </a>
             </li>
 

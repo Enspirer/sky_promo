@@ -32,6 +32,20 @@ Breadcrumbs::for('admin.queue.index', function ($trail) {
     $trail->push('Queue Process', route('admin.queue.index'));
 });
 
+Breadcrumbs::for('admin.singlemail.index', function ($trail) {
+    $trail->push('Single Mail', route('admin.singlemail.index'));
+});
+
+Breadcrumbs::for('admin.singlemail.create', function ($trail) {
+    $trail->push('Single Mail Create', route('admin.singlemail.create'));
+});
+
+Breadcrumbs::for('admin.singlemail.show_statics', function ($trail) {
+    $trail->push('Single Campaign Static', route('admin.singlemail.show_statics',1));
+});
+
+
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
