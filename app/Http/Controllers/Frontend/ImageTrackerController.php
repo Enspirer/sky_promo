@@ -115,6 +115,32 @@ class ImageTrackerController extends Controller
     }
 
 
+    public function single_track_url($id,$url_id)
+    {
+        
+        $countviews = new SingleCampaignStatics;
+          
+        $camp = SingleCampaign::whereId($id)->first();
+
+        $json_data = json_decode($camp->json_data); 
+        
+        foreach($json_data as $key => $jsondata){
+            
+            // dd($key);
+            if($key == $url_id){
+                
+                SingleCampaignStatics::where('campaign_id', $id)
+                ->update([
+                'click_count'=> DB::raw('click_count+1')
+                ]);
+
+                return redirect( $jsondata->link );
+                
+            }
+            
+        }              
+                
+    }
 
 
 

@@ -82,7 +82,6 @@
             });
 
 
-
             var user_id;
 
             $(document).on('click', '.delete', function(){
@@ -94,6 +93,7 @@
                 $.ajax({
                 url:"singlemail/delete/"+user_id,
                 beforeSend:function(){
+                    // $('#ok_button').text('Deleting...');
                 },
                 success:function(data)
                 {

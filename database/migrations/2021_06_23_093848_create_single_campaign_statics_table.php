@@ -20,6 +20,7 @@ class CreateSingleCampaignStaticsTable extends Migration
             $table->text('read_count')->nullable();
             $table->text('click_count')->nullable();
             $table->text('is_failed')->nullable();
+            $table->text('target_email_count')->nullable();
             $table->timestamps();
         });
     }

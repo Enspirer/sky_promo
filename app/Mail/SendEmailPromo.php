@@ -12,33 +12,7 @@ use Illuminate\Queue\InteractsWithQueue;
 
 class SendEmailPromo extends Mailable
 {
-    // use  Queueable, SerializesModels;
-    // /**
-    //  * Create a new message instance.
-    //  *
-    //  * @return void
-    //  */
-
-    // public $id;
-    // public function __construct($id)
-    // {
-    //     $this->id = $id;
-    //     // dd($this->id);
-    // }
-
-    // /**
-    //  * Build the message.
-    //  *
-    //  * @return $this
-    //  */
-    // public function build()
-    // {
-    //     return $this->subject('Test Mail using Queue in Larvel 8')
-    //         ->view('frontend.mail.sky_promo_email');
-    // }
-
-
-    // use  Queueable, SerializesModels;
+    use  Queueable, SerializesModels;
     /**
      * Create a new message instance.
      *
@@ -60,11 +34,7 @@ class SendEmailPromo extends Mailable
     public function build()
     {
         return $this->subject('Test Mail using Queue in Larvel 8')
-            ->view('frontend.mail.sky_promo_single_email');
+            ->view('frontend.mail.sky_promo_email');
     }
-
-
-
-
 
 }

@@ -8,8 +8,11 @@ use DataTables;
 use App\Models\SingleCampaign;
 use App\Models\SingleCampaignStatics;
 use App\Models\CompanyDetails;
+use App\Models\EmailBuilk;
 use DB;
-use \App\Mail\SendEmailPromo;
+use Mail;  
+// use \App\Mail\SendEmailPromo;
+use \App\Mail\SendSingleEmailPromo;
 
 
 class SingleMailController extends Controller
@@ -37,13 +40,11 @@ class SingleMailController extends Controller
         return Datatables::of($category)
 
             ->addColumn('action', function ($row) {
-                // $btn = '<a href="'.route('admin.campaign.show_statics',$row->id).'" class="btn btn-primary btn-sm" style="margin-right: 10px"><i class="fa fa-eye"></i> View Static </a>';
-                
-                $btn2 = '<button type="button" name="delete" id="'.$row->id.'" class="delete btn btn-danger btn-sm">Delete</button>';
-                
-                // $btn3 = '<a href="'.route('admin.campaign.edit',$row->id).'" name="edit" id="'.$row->id.'" class="edit btn btn-warning btn-sm ml-3" style="margin-right: 10px"><i class="fas fa-edit"></i> Edit </a>';
                
-                return $btn2;
+                $btn = '<a href="'.route('admin.singlemail.show_statics',$row->id).'" class="btn btn-success btn-sm" style="margin-right: 10px"><i class="far fa-chart-bar"></i> View Static </a>';
+                $btn2 = '<button type="button" name="delete" id="'.$row->id.'" class="delete btn btn-danger btn-sm"><i class="far fa-trash-alt"></i> Delete</button>';
+                               
+                return $btn.$btn2;
             })
             ->rawColumns(['action'])
             ->make();
@@ -67,6 +68,7 @@ class SingleMailController extends Controller
             'advertisement_name' => $request->advertiment_name1,
             'image' => $image_url1,
             'link' => $request->link1,
+            'description' => $request->description1,
         ];
         if($request->file('email_image2'))
         {
@@ -81,6 +83,7 @@ class SingleMailController extends Controller
             'advertisement_name' => $request->advertiment_name2,
             'image' => $image_url2,
             'link' => $request->link2,
+            'description' => $request->description2,
         ];
         if($request->file('email_image3'))
         {
@@ -95,6 +98,7 @@ class SingleMailController extends Controller
             'advertisement_name' => $request->advertiment_name3,
             'image' => $image_url,
             'link' => $request->link3,
+            'description' => $request->description3,
         ];
         $out_json = [
             $company_name1,$company_name2,$company_name3
@@ -104,8 +108,10 @@ class SingleMailController extends Controller
             $request->email,
         ];
 
-        $out_json_email = $request->email ;           
-        
+        $out_json_email = $request->email;  
+
+        $count = count($out_json_email);
+
         $emailCampaign = new SingleCampaign;
         $emailCampaign->user_id = auth()->user()->id;
         $emailCampaign->json_data = json_encode($out_json);
@@ -120,26 +126,47 @@ class SingleMailController extends Controller
         $emailStatics->read_count = 0;
         $emailStatics->click_count = 0;
         $emailStatics->is_failed = 0;
+        $emailStatics->target_email_count = $count;
         $emailStatics->save();
 
             foreach ($out_json_email as $singlemailr)            
             {
             // dd($singlemailr);
-            \Mail::to($singlemailr)->send(new SendEmailPromo($emailCampaign->id));
+            \Mail::to($singlemailr)->send(new SendSingleEmailPromo($emailCampaign->id));
             }
 
         return redirect()->route('admin.singlemail.index');
     }
 
-    public function destroy($id)
+    public function show_statics($id)
     {
-        $data = SingleCampaign::findOrFail($id);
-        $datas = SingleCampaignStatics::findOrFail($id);
-        $data->delete();
-        $datas->delete();
+        $campaigns = SingleCampaign::where('id',$id)->first();
+     
+        $statics = SingleCampaignStatics::where('campaign_id',$id)->first();
+
+        $emailcount = EmailBuilk::all()->count();
+        // dd($emailcount);
+
+
+        return view('backend.single_mail.show_statics',[
+            'statics' => $statics,    
+            'campaigns' => $campaigns,
+            'emailcount' => $emailcount
+            
+        ]);   
+
     }
 
+    public function destroy($id)
+    {
+        // $data = SingleCampaign::findOrFail($id);
+        // $datas = SingleCampaignStatics::findOrFail($id);
+        // $data->delete();
+        // $datas->delete();
 
+        DB::table('single_campaign_statics')->where('campaign_id', $id)->delete();
+        DB::table('single_campaigns')->where('id', $id)->delete();   
+    }
 
 
 }

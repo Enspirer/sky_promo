@@ -58,6 +58,10 @@
                                 <input type="text" class="form-control" name="advertiment_name1" required>
                             </div>
                             <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" name="description1" required>
+                            </div>
+                            <div class="form-group">
                                 <label>Link:</label>
                                 <input type="text" class="form-control" name="link1" required>
                             </div>
@@ -85,6 +89,10 @@
                                 <input type="text" class="form-control" name="advertiment_name2" required>
                             </div>
                             <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" name="description2" required>
+                            </div>
+                            <div class="form-group">
                                 <label>Link:</label>
                                 <input type="text" class="form-control" name="link2" required>
                             </div>
@@ -110,6 +118,10 @@
                             <div class="form-group">
                                 <label>Advertisement Name:</label>
                                 <input type="text" class="form-control" name="advertiment_name3" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" name="description3" required>
                             </div>
                             <div class="form-group">
                                 <label>Link:</label>

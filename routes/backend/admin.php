@@ -46,4 +46,5 @@ Route::get('singlemail', [SingleMailController::class, 'index'])->name('singlema
 Route::get('singlemail/create', [SingleMailController::class, 'create'])->name('singlemail.create');
 Route::post('singlemail/create', [SingleMailController::class, 'store'])->name('singlemail.store');
 Route::get('singlemail/getdetails', [SingleMailController::class, 'getDetails'])->name('singlemail.getdetails');
+Route::get('singlemail/show_statics/{id}', [SingleMailController::class, 'show_statics'])->name('singlemail.show_statics');
 Route::get('singlemail/delete/{id}', [SingleMailController::class, 'destroy'])->name('singlemail.destroy');
