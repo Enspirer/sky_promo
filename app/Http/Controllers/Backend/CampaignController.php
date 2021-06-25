@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use DataTables;
 use App\Models\CompanyDetails;
 use DB;
-
+use App\Jobs\SendPromoMailJob;
 
 class CampaignController extends Controller
 {
@@ -194,14 +194,17 @@ class CampaignController extends Controller
      
         $statics = CampaignStatics::where('campaign_id',$id)->first();
 
-        $emailcount = EmailBuilk::all()->count();
+        $getdetail = DB::table('email_builks')->count();
+
+
+
         // dd($emailcount);
 
 
         return view('backend.campaign.show_statics',[
             'statics' => $statics,    
             'campaigns' => $campaigns,
-            'emailcount' => $emailcount
+            'emailcount' => $getdetail
             
         ]);   
 
@@ -236,6 +239,16 @@ class CampaignController extends Controller
         $datas = CampaignStatics::findOrFail($id);
         $data->delete();
         $datas->delete();
+    }
+
+
+    public function start_campaign(Request $request)
+    {
+        dispatch(new SendPromoMailJob($request->id));
+        EmailCampaign::where('id',$request->id)->update([
+            'status' => 'Processing'
+        ]);
+        return back();
     }
     
 
