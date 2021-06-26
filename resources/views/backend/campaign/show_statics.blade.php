@@ -113,7 +113,13 @@
                                         </div>
                                     </div> -->
                                     <br>
-                                    <button type="submit" class="btn btn-primary">Start Campaign</button>
+                                    <form action="{{route('admin.campaign.start_campaign')}}" method="post">
+                                        {{csrf_field()}}
+                                        <input type="hidden" name="id" value="{{$campaigns->id}}">
+                                        <input type="hidden" name="status" value="Processing">
+                                        <button type="submit" class="btn btn-primary">Start Campaign</button>
+
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +152,7 @@
                                         {value: {{ $statics->email_view_count }}, name: 'View Count'},                                                                              
                                         {value: {{ $statics->email_send_count }}, name: 'Sent Count'},
                                         {value: {{ $statics->unsubcibe_count }}, name: 'Unsubscribed Email'},
-                                        {value: {{ $statics->taget_email_count }}, name: 'Target Email'},
+                                        {value: {{ $emailcount }}, name: 'Target Email'},
                                     ],
                                     emphasis: {
                                         itemStyle: {

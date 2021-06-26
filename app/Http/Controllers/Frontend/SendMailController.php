@@ -13,7 +13,7 @@ class SendMailController extends Controller
     public function index()
     {
 
-        dispatch(new SendPromoMailJob(4));
+
     }
 
     public static function generateRandomString($length = 10) {
