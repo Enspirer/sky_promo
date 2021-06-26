@@ -55,13 +55,10 @@ class SendSingleEmailPromo extends Mailable
 
         // dd($out);
              
-
         return $this->subject('Test Mail using Queue in Larvel 6')
             ->view('frontend.mail.sky_promo_single_email',[
-                // 'companies' => $data, 
                 'campaigns' => $campaigns,
                 'company' => $out
-
             ]);
     }
 

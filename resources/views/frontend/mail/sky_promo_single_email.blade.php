@@ -189,7 +189,7 @@
 														<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
 															<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
-																	<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="http://127.0.0.1:8000/single-pixel/{{ $id }}/0" style="width: 100%;" editable="true" border="0" alt=""  /></td>
+																	<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{{url('single-pixel/'.$id.'/0')}}" style="width: 100%;" editable="true" border="0" alt=""  /></td>
 																</tr>
 															</table>
 														</th>
@@ -199,10 +199,10 @@
 																	<td class="content" style="padding:30px 50px;">
 																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																			<tr>
-																				<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-transform:uppercase; text-align:left; padding-bottom:15px;">{{ $company[0] }}</td>
+																				<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-align:left; padding-bottom:15px;">{{ $company[0] }}</td>
 																			</tr>
 																			<tr>
-																				<td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:52px; line-height:58px; text-transform:uppercase; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[0]->advertisement_name }}</td>
+																				<td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:22px; line-height:58px; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[0]->advertisement_name }}</td>
 																			</tr>
 																			<tr>
 																				<td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[0]->description }}</td>
@@ -212,7 +212,7 @@
 																				<td align="left">
 																					<table width="140" border="0" cellspacing="0" cellpadding="0">
 																						<tr>
-																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="http://127.0.0.1:8000/single-pixel-url/{{ $id }}/0" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
+																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="{{url('single-pixel-url/'.$id.'/0')}}" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
 																						</tr>
 																					</table>
 																				</td>
@@ -234,7 +234,7 @@
 															<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
 																<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																	<tr>
-																		<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="http://127.0.0.1:8000/single-pixel/{{ $id }}/1" style="width: 100%;" editable="true" border="0" alt="" /></td>
+																		<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{{url('single-pixel/'.$id.'/1')}}" style="width: 100%;" editable="true" border="0" alt="" /></td>
 																	</tr>
 																</table>
 															</th>
@@ -244,20 +244,20 @@
 																		<td class="content" style="padding:30px 50px;">
 																			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																				<tr>
-																				<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-transform:uppercase; text-align:left; padding-bottom:15px;">{{ $company[1] }}</td>
-                                        </tr>
-                                        <tr>
-                                          <td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:52px; line-height:58px; text-transform:uppercase; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[1]->advertisement_name }}</td>
-                                        </tr>
-                                        <tr>
-                                          <td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[1]->description }}</td>
-                                        </tr>
+																					<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-align:left; padding-bottom:15px;">{{ $company[1] }}</td>
+                                        										</tr>
+																					<tr>
+																					<td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:22px; line-height:58px; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[1]->advertisement_name }}</td>
+																					</tr>
+																					<tr>
+																					<td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[1]->description }}</td>
+																					</tr>
 																				<!-- Button -->
 																				<tr>
 																				<td align="left">
 																					<table width="140" border="0" cellspacing="0" cellpadding="0">
 																						<tr>
-																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="http://127.0.0.1:8000/single-pixel-url/{{ $id }}/1" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
+																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="{{url('single-pixel-url/'.$id.'/1')}}" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
 																						</tr>
 																					</table>
 																				</td>
@@ -279,7 +279,7 @@
 																<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
 																	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																		<tr>
-																			<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="http://127.0.0.1:8000/single-pixel/{{ $id }}/2" style="width: 100%;" editable="true" border="0" alt="" /></td>
+																			<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{{url('single-pixel/'.$id.'/2')}}" style="width: 100%;" editable="true" border="0" alt="" /></td>
 																		</tr>
 																	</table>
 																</th>
@@ -288,25 +288,25 @@
 																		<tr>
 																			<td class="content" style="padding:30px 50px;">
 																				<table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                        <tr>
-																				<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-transform:uppercase; text-align:left; padding-bottom:15px;">{{ $company[2] }}</td>
-                                        </tr>
-                                        <tr>
-                                          <td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:52px; line-height:58px; text-transform:uppercase; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[2]->advertisement_name }}</td>
-                                        </tr>
-                                        <tr>
-                                          <td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[2]->description }}</td>
-                                        </tr>
+                                       											<tr>
+																					<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-align:left; padding-bottom:15px;">{{ $company[2] }}</td>
+                                        										</tr>
+																				<tr>
+																				<td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:22px; line-height:58px; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[2]->advertisement_name }}</td>
+																				</tr>
+																				<tr>
+																				<td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[2]->description }}</td>
+																				</tr>
 																					<!-- Button -->
 																					<tr>
-                                            <td align="left">
-                                              <table width="140" border="0" cellspacing="0" cellpadding="0">
-                                                <tr>
-                                                  <td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="http://127.0.0.1:8000/single-pixel-url/{{ $id }}/2" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
-                                                </tr>
-                                              </table>
-                                            </td>
-                                          </tr>
+																						<td align="left">
+																						<table width="140" border="0" cellspacing="0" cellpadding="0">
+																							<tr>
+																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="{{url('single-pixel-url/'.$id.'/2')}}" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
+																							</tr>
+																						</table>
+																						</td>
+																					</tr>
 																					<!-- END Button -->
 																				</table>
 																			</td>

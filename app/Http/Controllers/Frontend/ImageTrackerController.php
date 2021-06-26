@@ -51,38 +51,9 @@ class ImageTrackerController extends Controller
     }
 
     public function track_email_send($id)
-    {
-        
-        
-       
+    {   
         \Mail::to('laraveltest@yopmail.com')->send(new SendEmailPromo($id));
-        return ("Campaign Id: $id email sent");
-        // return view('emails.thanks');
-        // foreach($json_data as $key => $jsondata){
-            
-        //     // dd($key);
-        //     if($key == $image_id){
-                
-        //         // $countviews->email_view_count=$count;
-
-        //         CampaignStatics::where('campaign_id', $id)
-        //         ->update([
-        //         'email_view_count'=> DB::raw('email_view_count+1')
-        //         ]);
-
-        //         // CampaignStatics::whereId($id)->update($countviews->toArray());
-
-        //         return response( file_get_contents('./files/email_promo/'.$jsondata->image) ) ->header('Content-Type','image/png');
-        //         $details = [
-        //             'title' => 'Title: Mail from laravel Testing',
-        //             'body' => 'Body: This is a Testing Email'
-        //         ];
-        
-        //         \Mail::to('laraveltest@yopmail.com')->send(new SendEmailPromo($details));
-        //         // return view('emails.thanks');
-        //     }
-            
-        // }              
+        return ("Campaign Id: $id email sent");                   
                 
     }
 

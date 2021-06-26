@@ -15,11 +15,10 @@
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea type="text" class="form-control" name="description" rows="10"></textarea>
+                            <textarea type="text" class="form-control" name="description" rows="10" required></textarea>
                         </div>
                         <div class="form-group">
                             <label>Add Email</label>
-                            <!-- <input type="text" class="form-control" name="email" value="" required> -->
 
                             <div class="table-responsive">                                
                                 <table class="table table-bordered table-striped" id="user_table">
@@ -42,11 +41,11 @@
                         <div class="" style="border-style: dashed;border-width: 1px;padding: 10px;">
                             <div class="form-group">
                                 <label>Adaverise Image (300p * 400px) </label>
-                                <input type="file" class="form-control-file" name="email_image1">
+                                <input type="file" class="form-control-file" name="email_image1" required>
                             </div>
                             <div class="form-group">
                                 <label>Company Name</label>
-                                <select class="form-control" name="company_name1">
+                                <select class="form-control" name="company_name1" required>
                                     @foreach($companies as $com)
                                         <option value=" {{$com->id}} "> {{$com->company_name}} </option>
                                     @endforeach
@@ -59,11 +58,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <input type="text" class="form-control" name="description1" required>
+                                <textarea type="text" class="form-control" name="description1" rows="3" required></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Link:</label>
-                                <input type="text" class="form-control" name="link1" required>
+                                <input type="url" class="form-control" name="link1" required>
                             </div>
                         </div>
                     </div>
@@ -73,11 +72,11 @@
                         <div class="" style="border-style: dashed;border-width: 1px;padding: 10px;">
                             <div class="form-group">
                                 <label>Adaverise Image (300p * 400px) </label>
-                                <input type="file" class="form-control-file" name="email_image2">
+                                <input type="file" class="form-control-file" name="email_image2" required>
                             </div>
                             <div class="form-group">
                                 <label>Company Name</label>
-                                <select class="form-control" name="company_name2">
+                                <select class="form-control" name="company_name2" required>
                                     @foreach($companies as $com)
                                         <option value=" {{$com->id}} "> {{$com->company_name}} </option>
                                     @endforeach
@@ -90,11 +89,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <input type="text" class="form-control" name="description2" required>
+                                <textarea type="text" class="form-control" name="description2" rows="3" required></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Link:</label>
-                                <input type="text" class="form-control" name="link2" required>
+                                <input type="url" class="form-control" name="link2" required>
                             </div>
                         </div>
                     </div>
@@ -104,11 +103,11 @@
                         <div class="" style="border-style: dashed;border-width: 1px;padding: 10px;">
                             <div class="form-group">
                                 <label>Adaverise Image (300p * 400px) </label>
-                                <input type="file" class="form-control-file" name="email_image3">
+                                <input type="file" class="form-control-file" name="email_image3" required>
                             </div>
                             <div class="form-group">
                                 <label>Company Name</label>
-                                <select class="form-control" name="company_name3">
+                                <select class="form-control" name="company_name3" required>
                                     @foreach($companies as $com)
                                         <option value=" {{$com->id}} "> {{$com->company_name}} </option>
                                     @endforeach
@@ -121,11 +120,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <input type="text" class="form-control" name="description3" required>
+                                <textarea type="text" class="form-control" name="description3" rows="3" required></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Link:</label>
-                                <input type="text" class="form-control" name="link3" required>
+                                <input type="url" class="form-control" name="link3" required>
                             </div>
                         </div>
                     </div>
@@ -150,7 +149,7 @@ $(document).ready(function(){
     function dynamic_field(number)
     {
     html = '<tr>';
-            html += '<td width="90%"><input type="email" name="email[]" class="form-control" /></td>';
+            html += '<td width="90%"><input type="email" name="email[]" class="form-control" required/></td>';
         
             if(number > 1)
             {

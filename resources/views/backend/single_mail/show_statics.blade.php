@@ -18,8 +18,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label>Status</label>
-                                        
+                                        <label>Status</label>                                        
                                         
                                         @if($campaigns->status =='Complete') 
                                                 <h4 style="color: #32CD32">Complete</h4>
@@ -31,13 +30,31 @@
                                                 </div>
                                             @else
                                                 <h4 style="color: #960018">Failed</h4>
-                                        @endif
-                                            
-                                        
-                                   
+                                        @endif                                                     
                                            
                                     </div><br>
-                                    <div class="row">
+                                    
+                                    <div class="card">                                        
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4" align="center">
+                                                <label>Target Email Count</label><br>
+                                                    <h4>{{ $statics->target_email_count }}</h4>                                                
+                                                </div>
+                                                <!-- <div style="border: 2px solid green; border-radius: 50%; height: 60%; position: absolute;"></div> -->
+                                                <div class="col-md-4" align="center">
+                                                <label>View Count</label><br>
+                                                    <h4>{{ $statics->read_count }}</h4>                                                
+                                                </div>
+                                                <!-- <div style="border: 2px solid green; border-radius: 50%; height: 60%; position: absolute;"></div> -->
+                                                <div class="col-md-4" align="center">
+                                                <label>Click Count</label><br>
+                                                    <h4>{{ $statics->click_count }}</h4>                                                
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div><br>
+                                    <!-- <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Email Count</label>
@@ -50,21 +67,20 @@
                                                 <input type="text" value="" class="form-control" readonly>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="card">
                                         
                                         <div class="card-body">
                                             <div class="row">
                                             <div class="col-md-4">
-                                                <!-- <img src="{{url('files/email_promo/',json_decode($campaigns->json_data)[0]->image)}}" style="height: 150px;" alt="" > -->
                                                 <div class="" style="background-image: url('{{url('files/single_mail/',json_decode($campaigns->json_data)[0]->image)}}'); height: 100px; background-position: center; background-size: cover; width: auto;">
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="container">
                                                 <b>Advertisement Name:</b> {{ json_decode($campaigns->json_data)[0]->advertisement_name }}
-                                                </div><br><br>
+                                                </div><br>
                                                 <div class="container">
                                                 <b>Description :</b> {{ json_decode($campaigns->json_data)[0]->description }}
                                                 </div>
@@ -76,15 +92,14 @@
                                         
                                         <div class="card-body">
                                             <div class="row">
-                                            <div class="col-md-4">
-                                                <!-- <img src="{{url('files/email_promo/',json_decode($campaigns->json_data)[0]->image)}}" style="height: 150px;" alt="" > -->
+                                            <div class="col-md-4">                                                
                                                 <div class="" style="background-image: url('{{url('files/single_mail/',json_decode($campaigns->json_data)[1]->image)}}'); height: 100px; background-position: center; background-size: cover; width: auto;">
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="container">
                                                 <b>Advertisement Name:</b> {{ json_decode($campaigns->json_data)[1]->advertisement_name }}
-                                                </div><br><br>
+                                                </div><br>
                                                 <div class="container">
                                                 <b>Description :</b> {{ json_decode($campaigns->json_data)[1]->description }}
                                                 </div>
@@ -96,15 +111,14 @@
                                         
                                         <div class="card-body">
                                             <div class="row">
-                                            <div class="col-md-4">
-                                                <!-- <img src="{{url('files/email_promo/',json_decode($campaigns->json_data)[0]->image)}}" style="height: 150px;" alt="" > -->
+                                            <div class="col-md-4">                                                
                                                 <div class="" style="background-image: url('{{url('files/single_mail/',json_decode($campaigns->json_data)[2]->image)}}'); height: 100px; background-position: center; background-size: cover; width: auto;">
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="container">
                                                 <b>Advertisement Name:</b> {{ json_decode($campaigns->json_data)[2]->advertisement_name }}
-                                                </div><br><br>
+                                                </div><br>
                                                 <div class="container">
                                                 <b>Description :</b> {{ json_decode($campaigns->json_data)[2]->description }}
                                                 </div>
@@ -121,8 +135,8 @@
                                             </div>
                                         </div>
                                     </div> -->
-                                    <br>
-                                    <button type="submit" class="btn btn-primary">Start Campaign</button>
+                                    <!-- <br> -->
+                                    <!-- <button type="submit" class="btn btn-primary">Start Campaign</button> -->
                                 </div>
                             </div>
                         </div>
@@ -136,7 +150,7 @@
                         option = {
                             title: {
                                 text: 'Single Campaign Statics',
-                                subtext: 'Email Title',
+                                // subtext: 'Email Title',
                                 left: 'center'
                             },
                             tooltip: {

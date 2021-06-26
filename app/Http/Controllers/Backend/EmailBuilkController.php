@@ -23,23 +23,12 @@ class EmailBuilkController extends Controller
             'email' => 'required',
             'description' => 'required',
             'category' => 'required'
-        ]);
-
-
-
-
-
-
-
-        
+        ]);     
 
         $addemail = new EmailBuilk;
         $addemail->email=$request->email;
         $addemail->description=$request->description;
-        $addemail->category=$request->category;
-
-        
-
+        $addemail->category=$request->category;   
         $addemail->save();
 
         return back();                      
@@ -63,55 +52,10 @@ class EmailBuilkController extends Controller
 
         // $updateemail->save();
         EmailBuilk::whereId($request->hidden_id)->update($updateemail->toArray());
-
-
         return back();                      
 
     }
 
-
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'email' => 'required',
-    //         'description' => 'required',
-    //         'category' => 'required'
-    //     ]);
-
-    //     $error = Validator::make($request->all(), $rules);
-
-    //     if($error->fails())
-    //     {
-    //         return response()->json(['errors' => $error->errors()->all()]);
-    //     }
-
-    //     $form_data = array(
-    //         'email'        =>  $request->email,
-    //         'description'         =>  $request->description,
-    //         'category'         =>  $request->category
-    //     );
-
-    //     EmailBuilk::create($form_data);
-
-    //     return response()->json(['success' => 'Data Added successfully.']);
-    //     return back(); 
-
-    // }
-
-    // public function GetDetableDetails()
-    // {
-    //     $category = EmailBuilk::all();
-
-    //     return Datatables::of($category)
-
-    //         ->addColumn('action', function ($row) {
-    //             $btn = '<a href="" class="edit btn btn-primary btn-sm" style="margin-right: 10px"><i class="fa fa-edit"></i> Edit </a>';
-    //             $btn2 = '<a href="" class="edit btn btn-danger btn-sm"><i class="fa fa-trash"></i> Delete </a>';
-    //             return  $btn . $btn2;
-    //         })
-    //         ->rawColumns(['action'])
-    //         ->make();
-    // }
 
     public function GetDetableDetails(Request $request)
     {
@@ -137,7 +81,6 @@ class EmailBuilkController extends Controller
             return response()->json(['result' => $data]);
         }
     }
-
     
     public function destroy($id)
     {

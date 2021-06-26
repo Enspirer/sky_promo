@@ -11,7 +11,6 @@ use App\Models\CompanyDetails;
 use App\Models\EmailBuilk;
 use DB;
 use Mail;  
-// use \App\Mail\SendEmailPromo;
 use \App\Mail\SendSingleEmailPromo;
 
 

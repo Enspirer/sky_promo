@@ -15,7 +15,7 @@
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea type="text" class="form-control" name="description" rows="10"></textarea>
+                            <textarea type="text" class="form-control" name="description" rows="10" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -28,11 +28,7 @@
                             <div class="form-group">
                                 <label>Adaverise Image (300p * 400px) </label>
                                 <input type="file" class="form-control-file" name="email_image1">
-                            </div>
-                            <!-- <div class="form-group">
-                                <label>Company Name</label>
-                                <input type="text" class="form-control" name="company_name1" required>
-                            </div> -->
+                            </div>                           
                             <div class="form-group">
                                 <label>Company Name</label>
                                 <select class="form-control" name="company_name1">
