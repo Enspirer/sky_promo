@@ -15,7 +15,7 @@
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea type="text" class="form-control" name="description" rows="10" required></textarea>
+                            <textarea type="text" class="form-control" name="description" rows="8" required></textarea>
                         </div>
                         <div class="form-group">
                             <label>Add Email</label>

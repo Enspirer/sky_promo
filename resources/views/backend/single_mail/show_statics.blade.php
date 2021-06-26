@@ -41,12 +41,12 @@
                                                 <label>Target Email Count</label><br>
                                                     <h4>{{ $statics->target_email_count }}</h4>                                                
                                                 </div>
-                                                <!-- <div style="border: 2px solid green; border-radius: 50%; height: 60%; position: absolute;"></div> -->
+                                                
                                                 <div class="col-md-4" align="center">
                                                 <label>View Count</label><br>
-                                                    <h4>{{ $statics->read_count }}</h4>                                                
+                                                    <h4><?php echo(round( $statics->read_count )) ; ?></h4>                                                
                                                 </div>
-                                                <!-- <div style="border: 2px solid green; border-radius: 50%; height: 60%; position: absolute;"></div> -->
+                                                
                                                 <div class="col-md-4" align="center">
                                                 <label>Click Count</label><br>
                                                     <h4>{{ $statics->click_count }}</h4>                                                

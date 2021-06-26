@@ -123,29 +123,29 @@
 																		<td align="left">
 																			<table border="0" cellspacing="0" cellpadding="0" class="center" style="text-align:center;">
 																				<tr>
-																					<td class="text-header" style="color:#85868d; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:18px; text-align:left;"><multiline><a href="#" target="_blank" class="link2" style="color:#85868d; text-decoration:none;"><span class="link2" style="color:#85868d; text-decoration:none;">Enjoy free shipping and returns.</span></a></multiline></td>
+																					<td class="text-header" style="color:#85868d; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:18px; text-align:left;"><span class="link2" style="color:#85868d; text-decoration:none;">{{ $campaigns->description }}</span></td>
 																				</tr>
 																			</table>
 																		</td>
 																	</tr>
 																</table>
 															</th>
-															<th class="column-empty2" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+															<!-- <th class="column-empty2" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
 															<th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
 																<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																	<tr>
 																		<td align="right">
 																			<table border="0" cellspacing="0" cellpadding="0" class="center" style="text-align:center;">
 																				<tr>
-																					<td class="text-header" style="color:#85868d; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:18px; text-align:left;"><multiline>
-																						<webversion class="link2" style="color:#85868d; text-decoration:none;">View Online</webversion> | <forwardtoafriend class="link2" style="color:#85868d; text-decoration:none;">Forward</forwardtoafriend></multiline>
+																					<td class="text-header" style="color:#85868d; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:18px; text-align:left;">
+																						<webversion class="link2" style="color:#85868d; text-decoration:none;"></webversion> <forwardtoafriend class="link2" style="color:#85868d; text-decoration:none;"></forwardtoafriend>
 																					</td>
 																				</tr>
 																			</table>
 																		</td>
 																	</tr>
 																</table>
-															</th>
+															</th> -->
 														</tr>
 													</table>
 												</td>
@@ -337,7 +337,7 @@
 											<tr>
 												<td class="footer" style="padding:60px 30px;">
 													<table width="100%" border="0" cellspacing="0" cellpadding="0">
-														<tr>
+														<!-- <tr>
 															<td class="social-title pb30" style="color:#ffffff; font-family:'Raleway', Arial, sans-serif; font-size:14px; line-height:22px; text-align:center; text-transform:uppercase; padding-bottom:30px;"><multiline>f o l l o w &nbsp; u s</multiline></td>
 														</tr>
 														<tr>
@@ -353,12 +353,12 @@
 																	</tr>
 																</table>
 															</td>
-														</tr>
+														</tr> -->
 														<tr>
 															<td class="separator" style="border-bottom:1px solid #5e63d3;"></td>
 														</tr>
 														<tr>
-															<td class="text-footer pt30" style="color:#a9ace3; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:20px; text-align:center; padding-top:30px;"><multiline>Copyright &copy; 0123 Shopilicious <br />728 Dooley Branch, Beckershire, LA 63598-2909</multiline></td>
+															<td class="text-footer pt30" style="color:#a9ace3; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:20px; text-align:center; padding-top:30px;">Copyright &copy; Sky Promo </td>
 														</tr>
 													</table>
 												</td>

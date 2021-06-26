@@ -25,9 +25,12 @@ class SendSingleEmailPromo extends Mailable
      */
 
     public $id;
-    public function __construct($id)
+    public $campaign_name;
+
+    public function __construct($id,$campaign_name)
     {
         $this->id = $id;
+        $this->campaign_name = $campaign_name;
         // dd($this->id);
 
     }
@@ -52,10 +55,8 @@ class SendSingleEmailPromo extends Mailable
             // dd($company_detail);
             array_push($out,$company_detail->company_name);
         }
-
-        // dd($out);
              
-        return $this->subject('Test Mail using Queue in Larvel 6')
+        return $this->subject($this->campaign_name)
             ->view('frontend.mail.sky_promo_single_email',[
                 'campaigns' => $campaigns,
                 'company' => $out

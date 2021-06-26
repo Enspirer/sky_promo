@@ -72,13 +72,10 @@ class ImageTrackerController extends Controller
             // dd($key);
             if($key == $image_id){
                 
-                SingleCampaignStatics::where('campaign_id', $id)
-                ->update([
-                'read_count'=> DB::raw('read_count+1')
-                ]);
-
-                return response( file_get_contents('./files/single_mail/'.$jsondata->image) ) ->header('Content-Type','image/png');
-                
+                SingleCampaignStatics::where('campaign_id', $id)->update(['read_count'=> DB::raw('read_count+1/3')
+            ]);
+            
+                return response( file_get_contents('./files/single_mail/'.$jsondata->image) ) ->header('Content-Type','image/png'); 
             }
             
         }              
@@ -98,12 +95,9 @@ class ImageTrackerController extends Controller
         foreach($json_data as $key => $jsondata){
             
             // dd($key);
-            if($key == $url_id){
-                
-                SingleCampaignStatics::where('campaign_id', $id)
-                ->update([
-                'click_count'=> DB::raw('click_count+1')
-                ]);
+            if($key == $url_id){                
+                SingleCampaignStatics::where('campaign_id', $id)->update(['click_count'=> DB::raw('click_count+1')
+            ]);
 
                 return redirect( $jsondata->link );
                 

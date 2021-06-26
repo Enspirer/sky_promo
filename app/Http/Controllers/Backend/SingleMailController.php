@@ -131,7 +131,7 @@ class SingleMailController extends Controller
             foreach ($out_json_email as $singlemailr)            
             {
             // dd($singlemailr);
-            \Mail::to($singlemailr)->send(new SendSingleEmailPromo($emailCampaign->id));
+            \Mail::to($singlemailr)->send(new SendSingleEmailPromo($emailCampaign->id,$emailCampaign->campaign_name));
             }
 
         return redirect()->route('admin.singlemail.index');

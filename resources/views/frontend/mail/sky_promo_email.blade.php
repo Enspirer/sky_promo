@@ -26,7 +26,7 @@
             <a href="#" style="margin:0;padding:0;border:0;box-sizing:border-box;">Connect</a> <a href="#" style="margin:0;padding:0;border:0;box-sizing:border-box;">Share</a>
           </td>
           <td style="margin:0;padding:0;border:0;box-sizing:border-box;">
-            <img src="http://127.0.0.1:8000/pixel/{{ $id }}/0" alt="" style="margin:0;padding:0;border:0;box-sizing:border-box;float: right; width: 100%; padding: 15px; ;">
+            <img src="{{url('pixel/'.$id.'/0')}}" alt="" style="margin:0;padding:0;border:0;box-sizing:border-box;float: right; width: 100%; padding: 15px; ;">
           </td>
         </tr>
         <tr style="margin:0;padding:0;border:0;box-sizing:border-box;outline: thin solid; background-color: LightGray;">
@@ -36,7 +36,7 @@
             <a href="" style="margin:0;padding:0;border:0;box-sizing:border-box;">Connect</a> <a href="" style="margin:0;padding:0;border:0;box-sizing:border-box;">Share</a>
           </td>
           <td style="margin:0;padding:0;border:0;box-sizing:border-box;">
-            <img src="http://127.0.0.1:8000/pixel/{{ $id }}/1" alt="" style="margin:0;padding:0;border:0;box-sizing:border-box;float: right; width: 100%; padding: 15px; ;">
+            <img src="{{url('pixel/'.$id.'/1')}}" alt="" style="margin:0;padding:0;border:0;box-sizing:border-box;float: right; width: 100%; padding: 15px; ;">
           </td>
         </tr>
         <tr style="margin:0;padding:0;border:0;box-sizing:border-box;outline: thin solid; background-color: LightGray;">
@@ -46,7 +46,7 @@
             <a href="" style="margin:0;padding:0;border:0;box-sizing:border-box;">Connect</a> <a href="" style="margin:0;padding:0;border:0;box-sizing:border-box;">Share</a>
           </td>
           <td style="margin:0;padding:0;border:0;box-sizing:border-box;">
-            <img src="http://127.0.0.1:8000/pixel/{{ $id }}/2" alt="" style="margin:0;padding:0;border:0;box-sizing:border-box;float: right; width: 100%; padding: 15px; ;">
+            <img src="{{url('pixel/'.$id.'/2')}}" alt="" style="margin:0;padding:0;border:0;box-sizing:border-box;float: right; width: 100%; padding: 15px; ;">
           </td>
         </tr>
       </table>
