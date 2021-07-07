@@ -15,9 +15,9 @@
             <a class="nav-link" href="{{ route('frontend.index') }}"><i class="fas fa-home"></i></a>
         </li>
 
-        <li class="nav-item px-3">
+        <!-- <li class="nav-item px-3">
             <a class="nav-link" href="{{ route('admin.dashboard') }}">@lang('navs.frontend.dashboard')</a>
-        </li>
+        </li> -->
 
         <!-- @if(config('locale.status') && count(config('locale.languages')) > 1)
             <li class="nav-item px-3 dropdown">
@@ -36,7 +36,7 @@
                 <i class="fas fa-bell"></i>
             </a>
         </li>
-        <li class="nav-item d-md-down-none">
+        <!-- <li class="nav-item d-md-down-none">
             <a class="nav-link" href="#">
                 <i class="fas fa-list"></i>
             </a>
@@ -45,7 +45,7 @@
             <a class="nav-link" href="#">
                 <i class="fas fa-map-marker-alt"></i>
             </a>
-        </li>
+        </li> -->
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
             <img src="{{ $logged_in_user->picture }}" class="img-avatar" alt="{{ $logged_in_user->email }}">
