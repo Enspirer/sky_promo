@@ -1,396 +1,475 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-	<!--[if gte mso 9]>
-	<xml>
-		<o:OfficeDocumentSettings>
-		<o:AllowPNG/>
-		<o:PixelsPerInch>96</o:PixelsPerInch>
-		</o:OfficeDocumentSettings>
-	</xml>
-	<![endif]-->
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="format-detection" content="date=no" />
-	<meta name="format-detection" content="address=no" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="x-apple-disable-message-reformatting" />
-    <!--[if !mso]><!-->
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i|Raleway:400,400i,700,700i" rel="stylesheet" />
-    <!--<![endif]-->
-	<title>Email</title>
-	<!--[if gte mso 9]>
-	<style type="text/css" media="all">
-		sup { font-size: 100% !important; }
-	</style>
-	<![endif]-->
-	
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
-	<style type="text/css" media="screen">
-		/* Linked Styles */
-		body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#333545; -webkit-text-size-adjust:none }
-		a { color:#4e54cb; text-decoration:none }
-		p { padding:0 !important; margin:0 !important } 
-		img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
-		.mcnPreviewText { display: none !important; }
-		.text-footer a { color: #7e7e7e !important; }
-		.text-footer2 a { color: #c3c3c3 !important; }
-		
-		/* Mobile styles */
-		@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
-			.mobile-shell { width: 100% !important; min-width: 100% !important; }
-			
-			.m-center { text-align: center !important; }
-			.m-left { margin-right: auto !important; }
-			
-			.center { margin: 0 auto !important; }
-			
-			.td { width: 100% !important; min-width: 100% !important; }
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
 
-			.m-br-15 { height: 15px !important; }
-			.m-separator { border-bottom: 1px solid #000000; }
-			.small-separator { border-top: 1px solid #333333 !important; padding-bottom: 20px !important; }
+    <!-- CSS Reset : BEGIN -->
+    <style>
 
-			.m-td,
-			.m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f1f1f1;
+}
 
-			.m-block { display: block !important; }
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
 
-			.fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
-			
-			.content-middle { width: 140px !important; padding: 0px !important; }
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
 
-			.text-white { font-size: 12px !important; }
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
 
-			.h2-white { font-size: 46px !important; line-height: 50px !important; }
-			.h3-white { font-size: 24px !important; line-height: 30px !important; }
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
 
-			.mpb15 { padding-bottom: 15px; }
-			.content { padding: 20px 15px !important; }
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
 
-			.section-inner { padding: 0px !important; }
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+    text-decoration: none;
+}
 
-			.content-2 { padding: 30px 15px 30px 15px !important; }
-			.pt30 { padding-top: 20px !important; }
-			.p30-15 { padding: 30px 15px !important; }
-			.footer { padding: 30px 15px !important; }
-			.main { padding: 0px !important; }
-			.section { padding: 30px 15px 30px 15px !important; }
-			.section2 { padding: 0px 15px 30px 15px !important; }
-			.section4 { padding: 30px 15px !important; }
-			.section-inner2 { padding: 30px 15px !important; }
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
 
-			.separator-outer { padding-bottom: 30px !important; }
-			.section3 { padding: 30px 15px !important; }
-			.mpb10 { padding-bottom: 10px !important; padding-top: 5px !important; }
-			.preheader { padding-bottom: 20px !important; } 
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
 
-			.column,
-			.column-dir,
-			.column-top,
-			.column-empty,
-			.column-empty2,
-			.column-bottom,
-			.column-dir-top,
-			.column-dir-bottom { float: left !important; width: 100% !important; display: block !important; }
-			.column-empty { padding-bottom: 30px !important; }
-			.column-empty2 { padding-bottom: 10px !important; }
-			.content-spacing { width: 15px !important; }
-		}
-	</style>
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+
+
+    </style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+	    .primary{
+	background: #17bebb;
+}
+.bg_white{
+	background: #ffffff;
+}
+.bg_light{
+	background: #f7fafa;
+}
+.bg_black{
+	background: #000000;
+}
+.bg_dark{
+	background: rgba(0,0,0,.8);
+}
+.email-section{
+	padding:2.5em;
+}
+
+/*BUTTON*/
+.btn{
+	padding: 2px 30px;
+	display: inline-block;
+    margin-left: 15px;
+    border: 1px solid #585858;
+    color: #585858;
+    font-weight: 500;
+}
+.btn.btn-primary{
+	border-radius: 5px;
+	background: #17bebb;
+	color: #ffffff;
+}
+.btn.btn-white{
+	border-radius: 5px;
+	background: #ffffff;
+	color: #000000;
+}
+.btn.btn-white-outline{
+	border-radius: 5px;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.btn.btn-black-outline{
+	border-radius: 0px;
+	background: transparent;
+	border: 2px solid #000;
+	color: #000;
+	font-weight: 700;
+}
+.btn-custom{
+	color: rgba(0,0,0,.3);
+	text-decoration: underline;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Poppins', sans-serif;
+	color: #000000;
+	margin-top: 0;
+	font-weight: 400;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.8;
+	color: rgba(0,0,0,.4);
+}
+
+a{
+	color: #17bebb;
+}
+
+table{
+}
+/*LOGO*/
+
+.logo h1{
+	margin: 0;
+}
+.logo h1 a{
+	color: #17bebb;
+	font-size: 24px;
+	font-weight: 700;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*HERO*/
+.hero{
+	position: relative;
+	z-index: 0;
+}
+
+.hero .text{
+	color: rgba(0,0,0,.3);
+}
+.hero .text h2{
+	color: #000;
+	font-size: 34px;
+	margin-bottom: 0;
+	font-weight: 200;
+	line-height: 1.4;
+}
+.hero .text h3{
+	font-size: 24px;
+	font-weight: 300;
+}
+.hero .text h2 span{
+	font-weight: 600;
+	color: #000;
+}
+
+.text-author{
+	bordeR: 1px solid rgba(0,0,0,.05);
+	max-width: 50%;
+	margin: 0 auto;
+	padding: 2em;
+}
+.text-author img{
+	border-radius: 50%;
+	padding-bottom: 20px;
+}
+.text-author h3{
+	margin-bottom: 0;
+}
+ul.social{
+	padding: 0;
+}
+ul.social li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/*FOOTER*/
+
+.footer{
+	border-top: 1px solid rgba(0,0,0,.05);
+	color: rgba(0,0,0,.5);
+}
+.footer .heading{
+	color: #000;
+	font-size: 20px;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+}
+.footer ul li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.footer ul li a{
+	color: rgba(0,0,0,1);
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+}
+
+
+    </style>
+
+
 </head>
-<body class="body" style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#333545; -webkit-text-size-adjust:none;">
-	<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#333545">
-		<tr>
-			<td align="center" valign="top">
-				<!-- Main -->
-				<table width="100%" border="0" cellspacing="0" cellpadding="0">
-					<tr>
-						<td align="center">
-							<table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
-								<tr>
-									<td class="td" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-										<!-- Pre Header -->
-										<table width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tr>
-												<td class="preheader" style="padding:30px 0px 20px 0px;">
-													<table width="100%" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<th class="column-top" width="240" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-																<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																	<tr>
-																		<td align="left">
-																			<table border="0" cellspacing="0" cellpadding="0" class="center" style="text-align:center;">
-																				<tr>
-																					<td class="text-header" style="color:#85868d; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:18px; text-align:left;"><span class="link2" style="color:#85868d; text-decoration:none;">{{ $campaigns->description }}</span></td>
-																				</tr>
-																			</table>
-																		</td>
-																	</tr>
-																</table>
-															</th>
-															<!-- <th class="column-empty2" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
-															<th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-																<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																	<tr>
-																		<td align="right">
-																			<table border="0" cellspacing="0" cellpadding="0" class="center" style="text-align:center;">
-																				<tr>
-																					<td class="text-header" style="color:#85868d; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:18px; text-align:left;">
-																						<webversion class="link2" style="color:#85868d; text-decoration:none;"></webversion> <forwardtoafriend class="link2" style="color:#85868d; text-decoration:none;"></forwardtoafriend>
-																					</td>
-																				</tr>
-																			</table>
-																		</td>
-																	</tr>
-																</table>
-															</th> -->
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-										<!-- END Pre Header -->
 
-										<!-- Header -->
-										<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
-											<tr>
-												<td style="padding: 30px 0px 30px 30px;">
-													<table width="100%" border="0" cellspacing="0" cellpadding="0" dir="rtl" style="direction: rtl;">
-														<tr>
-															<th class="column-dir" dir="ltr" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;">
-																<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																	<tr>
-																		<!-- <td class="img-right" style="font-size:0pt; line-height:0pt; text-align:right;"><img src="http://127.0.0.1:8000/single-pixel/{{ $id }}/0" style="width: 100%;" editable="true" border="0" alt="" /></td> -->
-																	</tr>
-																</table>
-															</th>
-															<th class="column-empty" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
-															<th class="column-dir" dir="ltr" width="200" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;">
-																<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																	<tr>
-																		<!-- <td class="img m-center mpb10" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="http://127.0.0.1:8000/single-pixel/{{ $id }}/2" style="width: 100%;" editable="true" border="0" alt="" /></td> -->
-																	</tr>
-																</table>
-															</th>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-										<!-- END Header -->
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f1f1f1;">
+	<center style="width: 100%; background-color: #f1f1f1;">
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+    	<!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+			<tr>
+                <td valign="middle" class="hero">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <table>
+                                <tr>
+                                    <td valign="top" class="bg_white">
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="logo">
+                                                <h1><a href="#" style="color: #585858; padding-left: 0.6em;">{{ $company[0] }}</a></h1>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: white; padding: 1em;">
+                                        <div class="text">
+                                            <img src="{{url('single-pixel/'.$id.'/0')}}" alt="" style="width: 100%; height: auto;">
+                                        </div>
+                                        <div class="text-details">
+                                            <table>
+                                                <tr>
+                                                    <td class="bg-white" >
+                                                        <p>{{ json_decode($campaigns->json_data)[0]->description }}</p>
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <p><a href="{{url('single-pixel-url/'.$id.'/0')}}" class="btn">VIEW</a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <p></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </tr>
 
-										<!-- <repeater> -->
-											<!-- Intro -->
-											<!-- <layout label='Intro'> -->
-												<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4e54cb">
-													<tr>
-														<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-															<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																<tr>
-																	<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{{url('single-pixel/'.$id.'/0')}}" style="width: 100%;" editable="true" border="0" alt=""  /></td>
-																</tr>
-															</table>
-														</th>
-														<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-															<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																<tr>
-																	<td class="content" style="padding:30px 50px;">
-																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-align:left; padding-bottom:15px;">{{ $company[0] }}</td>
-																			</tr>
-																			<tr>
-																				<td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:22px; line-height:58px; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[0]->advertisement_name }}</td>
-																			</tr>
-																			<tr>
-																				<td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[0]->description }}</td>
-																			</tr>
-																			<!-- Button -->
-																			<tr>
-																				<td align="left">
-																					<table width="140" border="0" cellspacing="0" cellpadding="0">
-																						<tr>
-																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="{{url('single-pixel-url/'.$id.'/0')}}" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
-																						</tr>
-																					</table>
-																				</td>
-																			</tr>
-																			<!-- END Button -->
-																		</table>
-																	</td>
-																</tr>
-															</table>
-														</th>
-													</tr>
-												</table>
-											<!-- </layout> <br> <br> -->
-											<!-- <repeater> -->
-												<!-- Intro -->
-												<!-- <layout label='Intro'> -->
-													<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4e54cb" style="margin-top:10px;">
-														<tr>
-															<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-																<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																	<tr>
-																		<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{{url('single-pixel/'.$id.'/1')}}" style="width: 100%;" editable="true" border="0" alt="" /></td>
-																	</tr>
-																</table>
-															</th>
-															<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-																<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																	<tr>
-																		<td class="content" style="padding:30px 50px;">
-																			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																				<tr>
-																					<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-align:left; padding-bottom:15px;">{{ $company[1] }}</td>
-                                        										</tr>
-																					<tr>
-																					<td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:22px; line-height:58px; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[1]->advertisement_name }}</td>
-																					</tr>
-																					<tr>
-																					<td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[1]->description }}</td>
-																					</tr>
-																				<!-- Button -->
-																				<tr>
-																				<td align="left">
-																					<table width="140" border="0" cellspacing="0" cellpadding="0">
-																						<tr>
-																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="{{url('single-pixel-url/'.$id.'/1')}}" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
-																						</tr>
-																					</table>
-																				</td>
-																			</tr>
-																				<!-- END Button -->
-																			</table>
-																		</td>
-																	</tr>
-																</table>
-															</th>
-														</tr>
-													</table><br> <br><br> <br><br> <br>
-												<!-- </layout>  -->
-												<!-- <repeater> -->
-													<!-- Intro -->
-													<!-- <layout label='Intro'> -->
-														<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4e54cb" style="margin-top:10px;">
-															<tr>
-																<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-																	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																		<tr>
-																			<td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{{url('single-pixel/'.$id.'/2')}}" style="width: 100%;" editable="true" border="0" alt="" /></td>
-																		</tr>
-																	</table>
-																</th>
-																<th class="column" width="325" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-																	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-																		<tr>
-																			<td class="content" style="padding:30px 50px;">
-																				<table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                       											<tr>
-																					<td class="text-white left pb15" style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-align:left; padding-bottom:15px;">{{ $company[2] }}</td>
-                                        										</tr>
-																				<tr>
-																				<td class="h2-white left pb20" style="color:#ffffff; font-family:Arial, sans-serif; font-size:22px; line-height:58px; font-weight:bold; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[2]->advertisement_name }}</td>
-																				</tr>
-																				<tr>
-																				<td class="text4 left pb20" style="color:#d2d4ff; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:24px; text-align:left; padding-bottom:20px;">{{ json_decode($campaigns->json_data)[2]->description }}</td>
-																				</tr>
-																					<!-- Button -->
-																					<tr>
-																						<td align="left">
-																						<table width="140" border="0" cellspacing="0" cellpadding="0">
-																							<tr>
-																							<td class="text-button white-button" style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:center; text-transform:uppercase; padding:10px; background:#ffffff; color:#f54084; font-weight:bold;"><a href="{{url('single-pixel-url/'.$id.'/2')}}" target="_blank" class="link" style="color:#4e54cb; text-decoration:none;"><span class="link" style="color:#4e54cb; text-decoration:none;">View</span></a></td>
-																							</tr>
-																						</table>
-																						</td>
-																					</tr>
-																					<!-- END Button -->
-																				</table>
-																			</td>
-																		</tr>
-																	</table>
-																</th>
-															</tr>
-														</table>
-													<!-- </layout> <br> <br> -->
+                        <tr>
+                            <table>
+                                <tr>
+                                    <td valign="top" class="bg_white">
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="logo">
+                                                <h1><a href="#" style="color: #585858; padding-left: 0.6em;">{{ $company[1] }}</a></h1>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: white; padding: 1em;">
+                                        <div class="text">
+                                            <img src="{{url('single-pixel/'.$id.'/1')}}" alt="" style="width: 100%; height: auto;">
+                                        </div>
+                                        <div class="text-details">
+                                            <table>
+                                                <tr>
+                                                    <td class="bg-white" >
+                                                        <p>{{ json_decode($campaigns->json_data)[1]->description }}</p>
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <p><a href="{{url('single-pixel-url/'.$id.'/1')}}" class="btn">VIEW</a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <p></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </tr>
 
+                        <tr>
+                            <table>
+                                <tr>
+                                    <td valign="top" class="bg_white">
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="logo">
+                                                <h1><a href="#" style="color: #585858; padding-left: 0.6em;">{{ $company[2] }}</a></h1>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: white; padding: 1em;">
+                                        <div class="text">
+                                            <img src="{{url('single-pixel/'.$id.'/2')}}" alt="" style="width: 100%; height: auto;">
+                                        </div>
+                                        <div class="text-details">
+                                            <table>
+                                                <tr>
+                                                    <td class="bg-white" >
+                                                        <p>{{ json_decode($campaigns->json_data)[2]->description }}</p>
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <p><a href="{{url('single-pixel-url/'.$id.'/2')}}" class="btn">VIEW</a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <p></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </tr>
 
-											<!-- END Intro -->
+                    </table>
+                </td>
+            </tr><!-- end tr -->
+      <!-- 1 Column Text + Button : END -->
+      </table>
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	<!-- <tr>
+          <td valign="middle" class="bg_light footer email-section">
+            <table>
+            	<tr>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-right: 10px;">
+                      	<h3 class="heading">About</h3>
+                      	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
+                      	<h3 class="heading">Contact Info</h3>
+                      	<ul>
+					                <li><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+					                <li><span class="text">+2 392 3929 210</span></a></li>
+					              </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-left: 10px;">
+                      	<h3 class="heading">Useful Links</h3>
+                      	<ul>
+					                <li><a href="#">Home</a></li>
+					                <li><a href="#">About</a></li>
+					                <li><a href="#">Services</a></li>
+					                <li><a href="#">Work</a></li>
+					              </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>end: tr -->
+        <tr>
+          <td class="bg_light" style="text-align: center;">
+          	<p>No longer want to receive these email? You can <a href="#" style="color: rgba(0,0,0,.8);">Unsubscribe here</a></p>
+          </td>
+        </tr>
+      </table>
 
-											<!-- Three Products -->
-
-											<!-- END Three Products -->
-
-											<!-- Coupon -->
-											<!-- END Coupon -->
-
-											<!-- Two Columns -->
-
-											<!-- END Two Columns -->
-										<!-- </repeater> -->
- 
-										<!-- Footer -->
-										<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4e54cb">
-											<tr>
-												<td class="footer" style="padding:60px 30px;">
-													<table width="100%" border="0" cellspacing="0" cellpadding="0">
-														<!-- <tr>
-															<td class="social-title pb30" style="color:#ffffff; font-family:'Raleway', Arial, sans-serif; font-size:14px; line-height:22px; text-align:center; text-transform:uppercase; padding-bottom:30px;"><multiline>f o l l o w &nbsp; u s</multiline></td>
-														</tr>
-														<tr>
-															<td class="pb30" align="center" style="padding-bottom:30px;">
-																<table border="0" cellspacing="0" cellpadding="0">
-																	<tr>
-																		<td class="img" width="50" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="images/t_white_ico_facebook.png" width="40" height="40" editable="true" border="0" alt="" /></a></td>
-																		<td class="img" width="50" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="images/t_white_ico_twitter.png" width="40" height="40" editable="true" border="0" alt="" /></a></td>
-																		<td class="img" width="50" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="images/t_white_ico_gplus.png" width="40" height="40" editable="true" border="0" alt="" /></a></td>
-																		<td class="img" width="50" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="images/t_white_ico_youtube.png" width="40" height="40" editable="true" border="0" alt="" /></a></td>
-																		<td class="img" width="50" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="images/t_white_ico_pinterest.png" width="40" height="40" editable="true" border="0" alt="" /></a></td>
-																		<td class="img" width="40" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="images/t_white_ico_linkedin.png" width="40" height="40" editable="true" border="0" alt="" /></a></td>
-																	</tr>
-																</table>
-															</td>
-														</tr> -->
-														<tr>
-															<td class="separator" style="border-bottom:1px solid #5e63d3;"></td>
-														</tr>
-														<tr>
-															<td class="text-footer pt30" style="color:#a9ace3; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:20px; text-align:center; padding-top:30px;">Copyright &copy; Sky Promo </td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-										<!-- END Footer -->
-										
-										<!-- Footer Bar -->
-										<table width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tr>
-												<td class="footer-bar" style="padding:35px 15px;">
-													<table width="100%" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td class="text-footer2" style="color:#85868d; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:20px; text-align:center;">
-																<multiline>You are receiving this email because you have subscribed to receive updates from us. <br />Should you wish to cancel your subscription, please</multiline>
-																<unsubscribe class="link-footer-u" style="color:#c3c3c3; text-decoration:underline;">click here to unsubscribe</unsubscribe>.
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-										<!-- END Footer Bar -->
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-				<!-- END Main -->
-			</td>
-		</tr>
-	</table>
+    </div>
+  </center>
 </body>
 </html>
