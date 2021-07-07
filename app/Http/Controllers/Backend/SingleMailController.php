@@ -117,7 +117,7 @@ class SingleMailController extends Controller
         $emailCampaign->description = $request->description;
         $emailCampaign->campaign_name = $request->campaign_name;
         $emailCampaign->emails = json_encode($out_json_email);
-        $emailCampaign->status = 'Completed';
+        $emailCampaign->status = 'Complete';
         $emailCampaign->save();
         $emailStatics = new SingleCampaignStatics;
         $emailStatics->campaign_id = $emailCampaign->id;
