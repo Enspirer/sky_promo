@@ -34,7 +34,7 @@ class SingleMailController extends Controller
 
     public function getDetails()
     {
-        $category = SingleCampaign::orderBy('id', 'DESC')->get();
+        $category = SingleCampaign::orderBy('id', 'ASC')->get();
 
         return Datatables::of($category)
 
