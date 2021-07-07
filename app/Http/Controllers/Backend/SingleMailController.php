@@ -34,7 +34,7 @@ class SingleMailController extends Controller
 
     public function getDetails()
     {
-        $category = SingleCampaign::all();
+        $category = SingleCampaign::orderBy('id', 'DESC')->get();
 
         return Datatables::of($category)
 
@@ -117,7 +117,7 @@ class SingleMailController extends Controller
         $emailCampaign->description = $request->description;
         $emailCampaign->campaign_name = $request->campaign_name;
         $emailCampaign->emails = json_encode($out_json_email);
-        $emailCampaign->status = 'Pending';
+        $emailCampaign->status = 'Completed';
         $emailCampaign->save();
         $emailStatics = new SingleCampaignStatics;
         $emailStatics->campaign_id = $emailCampaign->id;
@@ -143,7 +143,7 @@ class SingleMailController extends Controller
      
         $statics = SingleCampaignStatics::where('campaign_id',$id)->first();
 
-        $emailcount = EmailBuilk::all()->count();
+        $emailcount = 20;
         // dd($emailcount);
 
 
