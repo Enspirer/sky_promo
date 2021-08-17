@@ -103,13 +103,19 @@
                                                     </tbody></table>
                                             </th>
                                             <th class="column-empty" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
-                                            <th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                            <th class="column" style="font-size:0pt;line-height:0pt;padding:0;margin:0;font-weight:normal;">
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="
-    margin-top: 80px;
-    margin-left: -180px;
+    /* margin-top: 80px; */
+    /* margin-left: -180px; */
 ">
-                                                    <tbody><tr>
+                                                    <tbody style=""><tr>
                                                         <td class="text-header" style="color:#999999;font-family:'Roboto', Arial,sans-serif;font-size:12px;line-height:16px;text-align: right;text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="100" height="100" mc:edit="image_1" style="" border="0" alt=""></div></td>
+                                                    </tr>
+                                                    </tbody></table>
+                                            </th><th class="column-top" width="145" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody><tr>
+                                                        <td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
                                                     </tr>
                                                     </tbody></table>
                                             </th>
@@ -410,7 +416,7 @@
                                 <tbody><tr>
                                     <td style="padding: 20px 15px;background-color: #5286fe;" bgcolor="#b9b9b9" align="center">
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                            <tbody><tr><td class="section-title" style="color:#ffffff; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; font-weight:bold; text-transform:uppercase;"><div mc:edit="text_6">Presentation Deck</div></td>
+                                            <tbody><tr><td class="section-title" style="color:#ffffff; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; font-weight:bold; text-transform:uppercase;"><div mc:edit="text_6">SkyCard - Social</div></td>
 
                                             </tr>
                                             </tbody></table>
