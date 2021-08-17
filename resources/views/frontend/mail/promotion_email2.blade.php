@@ -1,4 +1,3 @@
-
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--[if gte mso 9]>
     <xml>
@@ -105,9 +104,12 @@
                                             </th>
                                             <th class="column-empty" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
                                             <th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
-                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="
+    margin-top: 80px;
+    margin-left: -130px;
+">
                                                     <tbody><tr>
-                                                        <td class="text-header" style="color:#999999; font-family:'Roboto', Arial,sans-serif; font-size:12px; line-height:16px; text-align:right; text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="175" height="175" mc:edit="image_1" style="" border="0" alt=""></div></td>
+                                                        <td class="text-header" style="color:#999999;font-family:'Roboto', Arial,sans-serif;font-size:12px;line-height:16px;text-align:right;text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="100" height="100" mc:edit="image_1" style="" border="0" alt=""></div></td>
                                                     </tr>
                                                     </tbody></table>
                                             </th>
@@ -137,7 +139,7 @@
                                     <td>
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffffF">
                                             <tbody><tr>
-                                                <td class="p30-15" style="padding: 50px 30px;border-bottom-style: solid;border-color: #f4f4f4;border-width: 11px;">
+                                                <td class="p30-15" style="padding: 50px 30px;border-bottom-style: solid;border-color: #f4f4f4;border-width: 11px;padding-top: 10px;">
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tbody><tr>
                                                             <td class="h2 white center pb20" style="font-family:'Roboto', Arial,sans-serif;font-size: 17px;line-height:34px;color: #000000;padding-bottom:20px;">
@@ -250,10 +252,10 @@
                                                 <td style="padding-bottom: 30px;">
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tbody><tr>
-                                                            <td style="padding: 20px 15px;" bgcolor="#b9b9b9" align="center">
+                                                            <td style="padding: 20px 15px;" bgcolor="#ffffff" align="center">
                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                     <tbody><tr>
-                                                                        <td class="section-title" style="color:#ffffff; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; font-weight:bold; text-transform:uppercase;"><div mc:edit="text_6">Presentation Deck</div></td>
+                                                                        <td class="section-title" style="color: #000000;font-family:'Roboto', Arial,sans-serif;font-size:16px;line-height:22px;text-align:center;font-weight:bold;text-transform:uppercase;"><div mc:edit="text_6">Presentation Deck</div></td>
                                                                     </tr>
                                                                     </tbody></table>
                                                             </td>
@@ -312,10 +314,10 @@
                                                 <td style="padding-bottom: 10px;">
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tbody><tr>
-                                                            <td style="padding: 20px 15px;" bgcolor="#b9b9b9 " align="center">
+                                                            <td style="padding: 20px 15px;" bgcolor="#ffffff" align="center">
                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                     <tbody><tr>
-                                                                        <td class="section-title" style="color:#ffffff; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; font-weight:bold; text-transform:uppercase;"><div mc:edit="text_13">Business Card Management Application
+                                                                        <td class="section-title" style="color: #000000;font-family:'Roboto', Arial,sans-serif;font-size:16px;line-height:22px;text-align:center;font-weight:bold;text-transform:uppercase;"><div mc:edit="text_13">Business Card Management Application
 
                                                                             </div></td>
 
