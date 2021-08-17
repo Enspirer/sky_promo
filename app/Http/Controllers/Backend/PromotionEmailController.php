@@ -15,9 +15,7 @@ class PromotionEmailController extends Controller
 
     public function send_email(Request $request)
     {
-
-        \Mail::to($request->email)->send(new PromotionEmail('Sanjaya Senevirathne','Mr.','This is email address'));
-
-        dd($request);
+        \Mail::to($request->email)->send(new PromotionEmail($request->sender_name,$request->sender_type,$request->subject));
+        return back();
     }
 }
