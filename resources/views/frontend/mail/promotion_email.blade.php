@@ -328,9 +328,9 @@
                                                                     <tr>
                                                                         <td style="padding: 15pt 0pt 0pt 0pt">
                                                                             <p style="margin: 0">Kind Regards,</p>
-                                                                            <p style="margin: 0">K. Ramanayake</p>
-                                                                            <p style="margin: 0">Director Marketing | Sky Cards</p>
-                                                                            <p style="margin: 0">voice: 0777009990 | dm@skycards.lk</p>
+                                                                            <p style="margin: 0">PMC Pavani</p>
+                                                                            <p style="margin: 0">Business Development Executive | Sky Cards</p>
+                                                                            <p style="margin: 0">voice: 0762942045  | pavani@skycards.lk</p>
                                                                         </td>
                                                                     </tr>
                                                                     </tbody>

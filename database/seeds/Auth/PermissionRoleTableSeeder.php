@@ -24,6 +24,14 @@ class PermissionRoleTableSeeder extends Seeder
 
         // Create Permissions
         Permission::create(['name' => 'view backend']);
+        Permission::create(['name' => 'view email bulk']);
+        Permission::create(['name' => 'view campaign']);
+        Permission::create(['name' => 'view queue process']);
+        Permission::create(['name' => 'view companies']);
+        Permission::create(['name' => 'view single mail']);
+        Permission::create(['name' => 'view promotion email']);
+        Permission::create(['name' => 'view access']);
+        Permission::create(['name' => 'view log viewer']);
 
         // Assign Permissions to other Roles
         // Note: Admin (User 1) Has all permissions via a gate in the AuthServiceProvider

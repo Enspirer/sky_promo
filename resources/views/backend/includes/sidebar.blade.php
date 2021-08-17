@@ -11,47 +11,64 @@
                 </a>
             </li>
 
+            @can('view email bulk')
             <li class="nav-item">
                 <a class="nav-link {{active_class(Route::is('admin/emailbulk'))}}" href="{{ route('admin.emailbulk.index') }}">
                     <i class="nav-icon fa fa-mail-bulk"></i>
                     Email Builk
                 </a>
             </li>
+            @endcan
 
-            <li class="nav-item">
-                <a class="nav-link {{active_class(Route::is('admin/campaign'))}}" href="{{ route('admin.campaign.index') }}">
-                    <i class="nav-icon fas fa-arrow-alt-circle-right"></i>
-                    Campaign
-                </a>
-            </li>
+            @can('view campaign')
+                <li class="nav-item">
+                    <a class="nav-link {{active_class(Route::is('admin/campaign'))}}" href="{{ route('admin.campaign.index') }}">
+                        <i class="nav-icon fas fa-arrow-alt-circle-right"></i>
+                        Campaign
+                    </a>
+                </li>
+            @endcan
 
+            @can('view queue process')
             <li class="nav-item">
                 <a class="nav-link {{active_class(Route::is('admin/queue'))}}" href="{{ route('admin.queue.index') }}">
                     <i class="nav-icon fa fa-running"></i>
                     Queue Process
                 </a>
             </li>
+            @endcan
 
-            <li class="nav-item">
-                <a class="nav-link {{active_class(Route::is('admin/companies'))}}" href="{{ route('admin.companies.index') }}">                    
-                    <i class="nav-icon fas fa-building"></i>
-                    Companies 
-                </a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link {{active_class(Route::is('admin/singlemail'))}}" href="{{ route('admin.singlemail.index') }}">                    
-                    <i class="nav-icon fas fa-envelope"></i>
-                    Single Mail 
-                </a>
-            </li>
+            @can('view companies')
+                <li class="nav-item">
+                    <a class="nav-link {{active_class(Route::is('admin/companies'))}}" href="{{ route('admin.companies.index') }}">
+                        <i class="nav-icon fas fa-building"></i>
+                        Companies
+                    </a>
+                </li>
+            @endcan
 
-            <li class="nav-item">
-                <a class="nav-link {{active_class(Route::is('admin/sky_promotion_email'))}}" href="{{ route('admin.sky_promotion_email.index') }}">
-                    <i class="nav-icon fas fa-envelope"></i>
-                    Promotion Email
-                </a>
-            </li>
+
+            @can('view single mail')
+                <li class="nav-item">
+                    <a class="nav-link {{active_class(Route::is('admin/singlemail'))}}" href="{{ route('admin.singlemail.index') }}">
+                        <i class="nav-icon fas fa-envelope"></i>
+                        Single Mail
+                    </a>
+                </li>
+            @endcan
+
+            @can('view promotion email')
+                <li class="nav-item">
+                    <a class="nav-link {{active_class(Route::is('admin/sky_promotion_email'))}}" href="{{ route('admin.sky_promotion_email.index') }}">
+                        <i class="nav-icon fas fa-envelope"></i>
+                        Promotion Email
+                    </a>
+                </li>
+            @endcan
+
+
+
 
 
 
