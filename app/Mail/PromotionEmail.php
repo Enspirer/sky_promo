@@ -47,7 +47,7 @@ class PromotionEmail extends Mailable
          $skycard->save();
 
         return $this->subject($this->subject)
-            ->view('frontend.mail.promotion_email',[
+            ->view('frontend.mail.promotion_email2',[
                 'greetings' => $this->greetings,
                 'name' => $this->name,
                 'subject' => $this->subject
