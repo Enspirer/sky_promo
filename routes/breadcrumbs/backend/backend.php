@@ -44,6 +44,9 @@ Breadcrumbs::for('admin.singlemail.show_statics', function ($trail) {
     $trail->push('Single Campaign Static', route('admin.singlemail.show_statics',1));
 });
 
+Breadcrumbs::for('admin.sky_promotion_email.index', function ($trail) {
+    $trail->push('Promotion Email', route('admin.sky_promotion_email.index'));
+});
 
 
 

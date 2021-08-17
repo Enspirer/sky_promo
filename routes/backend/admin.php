@@ -7,7 +7,7 @@ use App\Http\Controllers\Backend\CompaniesController;
 use App\Http\Controllers\Backend\QueueProcessController;
 use App\Http\Controllers\Backend\SingleMailController;
 use App\Http\Controllers\ImportExportExcel\ImportExportExcelController;
-
+use App\Http\Controllers\Backend\PromotionEmailController;
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -53,3 +53,9 @@ Route::post('singlemail/create', [SingleMailController::class, 'store'])->name('
 Route::get('singlemail/getdetails', [SingleMailController::class, 'getDetails'])->name('singlemail.getdetails');
 Route::get('singlemail/show_statics/{id}', [SingleMailController::class, 'show_statics'])->name('singlemail.show_statics');
 Route::get('singlemail/delete/{id}', [SingleMailController::class, 'destroy'])->name('singlemail.destroy');
+
+
+
+Route::get('sky_promotion_email', [PromotionEmailController::class, 'index'])->name('sky_promotion_email.index');
+Route::post('sky_promotion_email/send', [PromotionEmailController::class, 'send_email'])->name('sky_promotion_email.send_email');
+
