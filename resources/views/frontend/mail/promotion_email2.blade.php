@@ -106,10 +106,10 @@
                                             <th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="
     margin-top: 80px;
-    margin-left: -130px;
+    margin-left: -180px;
 ">
                                                     <tbody><tr>
-                                                        <td class="text-header" style="color:#999999;font-family:'Roboto', Arial,sans-serif;font-size:12px;line-height:16px;text-align:right;text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="100" height="100" mc:edit="image_1" style="" border="0" alt=""></div></td>
+                                                        <td class="text-header" style="color:#999999;font-family:'Roboto', Arial,sans-serif;font-size:12px;line-height:16px;text-align: right;text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="100" height="100" mc:edit="image_1" style="" border="0" alt=""></div></td>
                                                     </tr>
                                                     </tbody></table>
                                             </th>
