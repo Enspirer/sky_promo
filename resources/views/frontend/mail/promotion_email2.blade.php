@@ -85,11 +85,16 @@
     <tbody><tr>
         <td align="center" valign="top">
             <table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
-                <tbody><tr>
-                    <td class="td container" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; margin:0; font-weight:normal; padding:0px 0px 40px 0px;">
+                <tbody style="
+    padding-top: 1;
+"><tr>
+                    <td class="td container" style="width:650px;min-width:650px;font-size:0pt;line-height:0pt;margin:0;font-weight:normal;padding:0px 0px 40px 0px;">
                         <!-- Header -->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tbody><tr>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="
+    /* padding-top: 70px; */
+">
+                            <tbody style="
+"><tr>
                                 <td class="p30-15" style="">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="
     background-color: white;
@@ -109,7 +114,9 @@
     /* margin-left: -180px; */
 ">
                                                     <tbody style=""><tr>
-                                                        <td class="text-header" style="color:#999999;font-family:'Roboto', Arial,sans-serif;font-size:12px;line-height:16px;text-align: right;text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="100" height="100" mc:edit="image_1" style="" border="0" alt=""></div></td>
+                                                        <td class="text-header" style="color:#999999;font-family:'Roboto', Arial,sans-serif;font-size:12px;line-height:16px;text-align: right;text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="100" height="100" mc:edit="image_1" style="
+    padding-top: 61px;
+" border="0" alt=""></div></td>
                                                     </tr>
                                                     </tbody></table>
                                             </th><th class="column-top" width="145" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
@@ -414,9 +421,9 @@
                         <a href="https://skycards.lk/">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody><tr>
-                                    <td style="padding: 20px 15px;background-color: #5286fe;" bgcolor="#b9b9b9" align="center">
+                                    <td style="padding: 20px 15px;background-color: #ffffff;" bgcolor="#ffffff" align="center">
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                            <tbody><tr><td class="section-title" style="color:#ffffff; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; font-weight:bold; text-transform:uppercase;"><div mc:edit="text_6">SkyCard - Social</div></td>
+                                            <tbody><tr><td class="section-title" style="color: #000000;font-family:'Roboto', Arial,sans-serif;font-size:16px;line-height:22px;text-align:center;font-weight:bold;text-transform:uppercase;"><div mc:edit="text_6">SkyCard - Social</div></td>
 
                                             </tr>
                                             </tbody></table>
@@ -444,7 +451,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-footer1 pb10" style="color:#999999; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;"><div mc:edit="text_35">SkyCards </div></td>
+                                            <td class="text-footer1 pb10" style="color:#999999; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;"><a mc:edit="text_35">www.skycards.lk</a></td>
                                         </tr>
                                         <tr>
                                             <td class="text-footer2 pb30" style="color:#999999; font-family:'Roboto', Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;"></td>
