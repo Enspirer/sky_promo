@@ -35,6 +35,10 @@ class PromotionEmail extends Mailable
     public function build()
     {
         return $this->subject($this->subject)
-            ->view('frontend.mail.promotion_email');
+            ->view('frontend.mail.promotion_email',[
+                'greetings' => $this->greetings,
+                'name' => $this->name,
+                'subject' => $this->subject
+            ]);
     }
 }

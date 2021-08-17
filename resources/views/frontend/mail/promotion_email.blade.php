@@ -63,7 +63,7 @@
                                                                     <tbody>
                                                                     <tr>
                                                                         <td>
-                                                                            <p style="margin: 0">Dear Mr.<br><br>It was pleasure talking to you today, and thank you for your time. &nbsp; &nbsp;<u></u><u></u></p>
+                                                                            <p style="margin: 0">Dear {{$greetings}}{{$name}}<br><br>It was pleasure talking to you today, and thank you for your time. &nbsp; &nbsp;<u></u><u></u></p>
                                                                             <p style="margin-top: 5px">Here are the main features of SkyCards.<u></u><u></u></p>
                                                                             <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Business Card scanner: Mobile App<u></u><u></u></p>
                                                                             <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Digital Business card: WhatsApp, SMS, Email, etc.<u></u><u></u></p>
