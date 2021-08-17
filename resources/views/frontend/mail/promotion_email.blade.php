@@ -1,671 +1,397 @@
-<body>
-<div
-        id="sky_temp_cover_photo"
-        style="
-        width: 100%;
-        height: 200px;
-        background-image: url('https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03.jpg'),linear-gradient(
-          180deg,
-          rgba(54, 209, 220, 1) 0%,
-          rgba(91, 134, 229, 1) 100%
-        );
-        background-size: cover;
-        background-position: center;
-        border-radius: 0 0 15px 15px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-      "
->
-    <img
-            id="sky_temp_profile_picture"
-            style="position: absolute; bottom: -55px;border-radius: 50%;border: 3px solid #005A8D;width: 125px;height:125px;"
-            src="assets/Mask Group 23.png"
-            alt=""
-    />
-
-    <div class="gradient" style="background: linear-gradient(0deg, rgba(112,184,189,0) 0%, rgba(0,0,0,1) 100%);width: 100%;height: 100px;"></div>
-    <a id="sky_temp_ca_vcard" href="#">   <i style="color: rgba(255, 255, 255, 0.699);box-shadow: 10px 10px 47px -9px rgba(0,0,0,0.95);position: absolute; right: 20px; top: 20px;font-size: 13px;" class="fas fa-user-plus"></i></a>
-
-</div>
-<div style="margin-top: 65px;">
-    <h6 id="sky_temp_first_name" style="text-align: center;margin: 0;font-family: 'Montserrat', sans-serif;font-size: 14px;">FIRST NAME</h6>
-    <h1 id="sky_temp_last_name" style="text-align: center; margin: 0;font-family: 'Montserrat', sans-serif;font-size: 22px;font-weight: 900;">LAST NAME</h1>
-    <p id="sky_temp_job_title" style="text-align: center; margin: 0;font-family: 'Montserrat', sans-serif;font-size: 12px;">JOB TITLE</p>
-</div>
-<div class="row" style="margin: 25px auto 0 auto; max-width: 300px">
-
-    <a
-            id="sky_temp-ca-call"
-            style="
-          margin: auto;
-          background: #ecf5f7;
-          width: 60px;
-          height: 60px;
-          text-decoration: none;
-          border-radius: 50%;
-          box-shadow: 10px 13px 36px -16px rgba(0, 0, 0, 0.75);
-          display: flex;
-          justify-content: center;
-        "
-            href="#"
-    ><i style="color: #1b9dfd" class="fas fa-phone m-auto"></i
-        ></a>
-    <a
-            style="
-          margin: auto;
-          background: #ecf5f7;
-          width: 60px;
-          height: 60px;
-          text-decoration: none;
-          border-radius: 50%;
-          box-shadow: 10px 13px 36px -16px rgba(0, 0, 0, 0.75);
-          display: flex;
-          justify-content: center;
-        "
-            type="button" data-toggle="modal" data-target="#exampleModalCenter"
-    ><i style="color: #1b9dfd" class="fas fa-comments m-auto"></i
-        ></a>
-    <a
-            style="
-          margin: auto;
-          background: #ecf5f7;
-          width: 60px;
-          height: 60px;
-          text-decoration: none;
-          border-radius: 50%;
-          box-shadow: 10px 13px 36px -16px rgba(0, 0, 0, 0.75);
-          display: flex;
-          justify-content: center;
-        "
-            type="button" id="social"
-    ><i style="color: #1b9dfd" class="fas fa-share-alt m-auto"></i
-        ></a>
-</div>
-<div class="row mt-5 ml-4 mr-4">
-    <div class="col-12 pl-1 pr-1">
-        <div
-                class="row m-0"
-                style="
-            background: #f7f9f9;
-            border-radius: 8px;
-            margin: auto;
-            display: flex;
-            padding: 15px 15px;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-          "
-        >
-            <i class="fas fa-building" style="color: #1b9dfd"></i>
-            <p
-                    id="sky_temp_company_name"
-                    style="
-              margin: 0 0 0 10px;
-              line-height: 1;
-              font-family: 'Montserrat', sans-serif;
-              font-size: 14px;
-            "
-            >
-                company name
-            </p>
-        </div>
-    </div>
-
-</div>
-
-
-
-
-
-<div class="row mt-3 ml-4 mr-4">
-
-
-    <div class="col-12 pl-1 pr-1">
-        <div
-                class="row m-0"
-                style="
-            background: #f7f9f9;
-            border-radius: 8px;
-            margin: auto;
-            display: flex;
-            padding: 15px 15px;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-          "
-        >
-            <i class="fas fa-phone" style="color: #1b9dfd"></i>
-            <p
-                    id="sky_temp_phone_number1"
-                    style="
-              margin: 0 0 0 10px;
-              line-height: 1;
-              font-family: 'Montserrat', sans-serif;
-              font-size: 14px;
-            "
-            >
-                mobile number
-            </p>
-        </div>
-    </div>
-</div>
-
-
-<div class="row mt-3 ml-4 mr-4">
-    <div class="col-12 pl-1 pr-1">
-        <div
-                class="row m-0"
-                style="
-            background: #f7f9f9;
-            border-radius: 8px;
-            margin: auto;
-            display: flex;
-            padding: 15px 15px;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-          "
-        >
-            <i class="fas fa-envelope" style="color: #1b9dfd"></i>
-            <p
-                    id="sky_temp_email_address"
-                    style="
-              margin: 0 0 0 10px;
-              line-height: 1;
-              font-family: 'Montserrat', sans-serif;
-              font-size: 14px;
-            "
-            >
-                email address
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="row mt-3 ml-4 mr-4">
-    <div class="col-12 pl-1 pr-1">
-        <div
-                class="row m-0"
-                style="
-            background: #f7f9f9;
-            border-radius: 8px;
-            margin: auto;
-            display: flex;
-            padding: 15px 15px;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-          "
-        >
-            <i class="fas fa-globe" style="color: #1b9dfd"></i>
-            <p
-                    id="sky_temp_website"
-                    style="
-              margin: 0 0 0 10px;
-              line-height: 1;
-              font-family: 'Montserrat', sans-serif;
-              font-size: 14px;
-            "
-            >
-                web site
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="row mt-3 ml-4 mr-4">
-    <div class="col-12 pl-1 pr-1">
-        <div
-                class="row m-0"
-                style="
-            background: #f7f9f9;
-            border-radius: 8px;
-            margin: auto;
-            display: flex;
-            padding: 15px 15px;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-          "
-        >
-            <i class="fas fa-address-book" style="color: #1b9dfd"></i>
-            <p
-                    id="sky_temp_address"
-                    style="
-              margin: 0 0 0 10px;
-              line-height: 1;
-              font-family: 'Montserrat', sans-serif;
-              font-size: 14px;
-            "
-            >
-                address
-            </p>
-        </div>
-    </div>
-</div>
-
-
-
-<br />
-
-<hr />
-
-<br />
-
-<div class="collaps" style="padding: 0 20px">
-    <div id="accordion">
-        <div
-                class="card"
-                style="
-            border: transparent;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-            border-radius: 8px;
-          "
-        >
-            <div
-                    class="card-header p-0"
-                    id="headingOne"
-                    style="border: transparent"
-            >
-                <h5 class="mb-0">
-                    <button
-                            id="collapse-btn"
-                            class=""
-                            data-toggle="collapse"
-                            data-target="#collapseOne"
-                            aria-expanded="false"
-                            aria-controls="collapseOne"
-                            style="
-                  font-family: 'Montserrat', sans-serif;
-                  color: #1b9dfd;
-                  width: 100%;
-                  background: #f7f9f9 !important;
-                  padding: 10px;
-                  outline: none;
-                  border: transparent;
-                  border-radius: 8px;
-                "
-                    >
-                        <div class="row">
-                            <div
-                                    class="col-10"
-                                    style="text-align: left; text-decoration: none"
-                            >
-                                <i style="font-size: 14px" class="fas fa-info-circle"></i>
-                                &nbsp;
-                                <span style="font-size: 15px; font-weight: 500">
-                      About me
-                    </span>
-                            </div>
-                            <div class="col-2">
-                                <i
-                                        id="down-icon"
-                                        class="fa fa-chevron-down ml-auto"
-                                        style="font-size: 15px"
-                                        aria-hidden="true"
-                                ></i>
-                            </div>
-                        </div>
-                    </button>
-                </h5>
-            </div>
-
-            <div
-                    id="collapseOne"
-                    class="collapse"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordion"
-            >
-                <div
-                        class="card-body"
-                        style="background: #f7f9f9; border-top: 1px solid #017a8d18"
-                >
-                    <p id="sky_temp_description" style=" font-family: 'Montserrat', sans-serif;font-size: 12px;">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life
-                        accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                        non cupidatat skateboard dolor brunch. Food truck quinoa
-                        nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                        put a bird on it squid single-origin coffee nulla assumenda
-                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                        wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                        excepteur butcher vice lomo. Leggings occaecat craft beer
-                        farm-to-table, raw denim aesthetic synth nesciunt you probably
-                        haven't heard of them accusamus labore sustainable VHS.
-                    </p>
-
+<p><br></p>
+<p><br></p>
+<div lang="EN-US" style="word-wrap: break-word">
+    <table style="width: 100.0%; background: white; border-collapse: collapse" border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tbody>
+        <tr>
+            <td style="padding: 0in 0in 0in 0in" valign="top">
+                <div align="center">
+                    <table style="width: 100.0%; border-collapse: collapse" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 0pt 0pt 0in 0pt; -webkit-box-shadow: 8px 10px 15px -9px rgb(205 205 205 / 75%); -moz-box-shadow: 8px 10px 15px -9px rgba(0,0,0,0.75); box-shadow: 8px 10px 15px -9px rgb(183 182 182 / 75%)">
+                                                <table style="width: 100.0%; border-collapse: collapse" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 420.0pt; padding: 0in 0in 0in 0in" valign="top" width="560">
+                                                            <div align="center">
+                                                                <table style="width: 100.0%; border-collapse: collapse" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="padding: 0.09in 0.08in 0in 0in">
+                                                                            <p style="text-align: right; margin: 0" align="right"><a href="https://www.skycards.lk" rel="noreferrer" target="_blank"> <span style="font-size: 10.5pt; color: #1376c8"> <img id="v1v1v1v1v1m_7314574281816980602m_-3255166610050118017_x0000_i1035" class="v1v1v1v1v1CToWUd" src="https://skycards.lk/light_theme/assets/logo%20compressed.png" alt="alt" width="100" height="90" border="0"> </span> </a> <span style="font-size: 1.0pt"><u></u><u></u></span></p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </div>
-
-        <div
-                class="card mt-2"
-                style="
-            border: transparent;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-            border-radius: 8px;
-          "
-        >
-            <div
-                    class="card-header p-0"
-                    id="headingOne"
-                    style="border: transparent"
-            >
-                <h5 class="mb-0">
-                    <button
-                            id="collapse-btn2"
-                            class=""
-                            data-toggle="collapse"
-                            data-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseOne"
-                            style="
-                  font-family: 'Montserrat', sans-serif;
-                  color: #1b9dfd;
-                  width: 100%;
-                  background: #f7f9f9 !important;
-                  padding: 10px;
-                  outline: none;
-                  border: transparent;
-                  border-radius: 8px;
-                "
-                    >
-                        <div class="row">
-                            <div
-                                    class="col-10"
-                                    style="text-align: left; text-decoration: none"
-                            >
-                                <i style="font-size: 14px" class="fas fa-image"></i>
-                                &nbsp;
-                                <span style="font-size: 15px; font-weight: 500">
-                      Photos
-                    </span>
-                            </div>
-                            <div class="col-2">
-                                <i
-                                        id="down-icon2"
-                                        class="fa fa-chevron-down ml-auto"
-                                        style="font-size: 15px"
-                                        aria-hidden="true"
-                                ></i>
-                            </div>
-                        </div>
-                    </button>
-                </h5>
-            </div>
-
-            <div
-                    id="collapseTwo"
-                    class="collapse"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordion"
-            >
-                <div
-                        class="card-body"
-                        style="background: #f7f9f9; border-top: 1px solid #017a8d18"
-                >
-                    <img
-                            class="mt-2"
-                            src="assets/covernew-02.jpg"
-                            alt=""
-                            width="100%"
-                            style="
-                  box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-                  border-radius: 8px;
-                "
-                    />
-
+                <div align="center">
+                    <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse; border-spacing: 0px" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 0pt 15.0pt 15pt 15.0pt; -webkit-box-shadow: 8px 10px 15px -9px rgb(205 205 205 / 75%); -moz-box-shadow: 8px 10px 15px -9px rgba(0,0,0,0.75); box-shadow: 8px 10px 15px -9px rgb(183 182 182 / 75%)">
+                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 420.0pt; padding: 0in 0in 0in 0.6in" valign="top" width="560">
+                                                            <div align="center">
+                                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p style="margin: 0">Dear Mr.<br><br>It was pleasure talking to you today, and thank you for your time. &nbsp; &nbsp;<u></u><u></u></p>
+                                                                            <p style="margin-top: 5px">Here are the main features of SkyCards.<u></u><u></u></p>
+                                                                            <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Business Card scanner: Mobile App<u></u><u></u></p>
+                                                                            <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Digital Business card: WhatsApp, SMS, Email, etc.<u></u><u></u></p>
+                                                                            <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Sky Cards Elite: Centralised Card Manager application<u></u><u></u></p>
+                                                                            <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Sky Connect: Virtual Business card Holder<u></u><u></u></p>
+                                                                            <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Sky Promo: SMS &amp; Email Marketing campaigns<u></u><u></u></p>
+                                                                            <p style="margin: 0; margin-bottom: 5px">&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp;Sky Daily: Social media for members<u></u><u></u></p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </div>
-
-        <div
-                class="card mt-2"
-                style="
-            border: transparent;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-            border-radius: 8px;
-          "
-        >
-            <div
-                    class="card-header p-0"
-                    id="headingOne"
-                    style="border: transparent"
-            >
-                <h5 class="mb-0">
-                    <button
-                            id="collapse-btn3"
-                            class=""
-                            data-toggle="collapse"
-                            data-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseOne"
-                            style="
-                  font-family: 'Montserrat', sans-serif;
-                  color: #1b9dfd;
-                  width: 100%;
-                  background: #f7f9f9 !important;
-                  padding: 10px;
-                  outline: none;
-                  border: transparent;
-                  border-radius: 8px;
-                "
-                    >
-                        <div class="row">
-                            <div
-                                    class="col-10"
-                                    style="text-align: left; text-decoration: none"
-                            >
-                                <i style="font-size: 14px" class="fas fa-video"></i>
-                                &nbsp;
-                                <span style="font-size: 15px; font-weight: 500">
-                      Videos
-                    </span>
-                            </div>
-                            <div class="col-2">
-                                <i
-                                        id="down-icon3"
-                                        class="fa fa-chevron-down ml-auto"
-                                        style="font-size: 15px"
-                                        aria-hidden="true"
-                                ></i>
-                            </div>
-                        </div>
-                    </button>
-                </h5>
-            </div>
-
-            <div
-                    id="collapseThree"
-                    class="collapse"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordion"
-            >
-                <div
-                        class="card-body"
-                        style="background: #f7f9f9; border-top: 1px solid #017a8d18"
-                >
-                    <iframe
-                            width="100%"
-                            src="https://www.youtube.com/embed/ScMzIvxBSi4"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                    ></iframe>
+                <div style="margin-top: 5px" align="center">
+                    <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse; border-spacing: 0px" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 15.0pt 15.0pt 15pt 15.0pt; -webkit-box-shadow: 8px 10px 15px -9px rgb(205 205 205 / 75%); -moz-box-shadow: 8px 10px 15px -9px rgba(0,0,0,0.75); box-shadow: 8px 10px 15px -9px rgb(183 182 182 / 75%); margin-top: 15pt">
+                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 420.0pt; padding: 0.1in 0in 0.1in 0.6in" valign="top" width="560">
+                                                            <div align="center">
+                                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td rowspan="4" width="150"><img id="v1v1v1v1v1m_7314574281816980602m_-3255166610050118017_x0000_i1035" class="v1v1v1v1v1CToWUd" style="width: 100%" src="https://breakwick.com/email-template/phone.jpg" alt="alt" border="0"></td>
+                                                                        <td>
+                                                                            <h1 style="margin-top: 10px; margin-bottom: 10px; font-size: 20px; background-color: #53b5ed; display: inline-block; padding: 15px 50px; color: white"><span style="font-size: 14pt">Digital Business Card &nbsp;</span></h1>
+                                                                            <span style="border: 1px solid #ff9317; padding: 14px 18px; color: black; background-color: #ff9317; font-size: 20px; position: relative; left: -26px; top: 0px">FREE</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <ul style="font-size: 16px; list-style-type: circle">
+                                                                                <ul style="font-size: 16px; list-style-type: circle">
+                                                                                    <li style="margin-bottom: 16px"><span style="font-size: 10pt">Register with Sky Cards</span></li>
+                                                                                    <li style="margin-bottom: 16px"><span style="font-size: 10pt">Create your Business card</span></li>
+                                                                                    <li style="margin-bottom: 16px"><span style="font-size: 10pt">Share on all platforms</span></li>
+                                                                                </ul>
+                                                                            </ul>
+                                                                            <h2 style="margin: 0; font-size: 16px; background-color: white; display: inline-block; padding: 10pt 20pt; border: 2px solid #c5c5c5; margin-left: 60px"><a style="font-size: 13px" href="https://skycards.lk/c/kashunramanayake-14" rel="noreferrer" target="_blank">View Sample Business card</a></h2>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding: 3.75pt 3.75pt 3.75pt 3.75pt">&nbsp;</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </div>
-
-        <div
-                class="card mt-2"
-                style="
-            border: transparent;
-            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.35);
-            border-radius: 8px;
-          "
-        >
-            <div
-                    class="card-header p-0"
-                    id="headingOne"
-                    style="border: transparent"
-            >
-                <h5 class="mb-0">
-                    <button
-                            id="collapse-btn4"
-                            class=""
-                            data-toggle="collapse"
-                            data-target="#collapseFour"
-                            aria-expanded="false"
-                            aria-controls="collapseOne"
-                            style="
-                  font-family: 'Montserrat', sans-serif;
-                  color: #1b9dfd;
-                  width: 100%;
-                  background: #f7f9f9 !important;
-                  padding: 10px;
-                  outline: none;
-                  border: transparent;
-                  border-radius: 8px;
-                "
-                    >
-                        <div class="row">
-                            <div
-                                    class="col-10"
-                                    style="text-align: left; text-decoration: none"
-                            >
-                                <i style="font-size: 14px" class="fas fa-link"></i> &nbsp;
-                                <span style="font-size: 15px; font-weight: 500">
-                      Links
-                    </span>
-                            </div>
-                            <div class="col-2">
-                                <i
-                                        id="down-icon4"
-                                        class="fa fa-chevron-down ml-auto"
-                                        style="font-size: 15px"
-                                        aria-hidden="true"
-                                ></i>
-                            </div>
-                        </div>
-                    </button>
-                </h5>
-            </div>
-
-            <div
-                    id="collapseFour"
-                    class="collapse"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordion"
-            >
-                <div
-                        class="card-body"
-                        style="background: #f7f9f9; border-top: 1px solid #017a8d18"
-                >
-                    <div
-                            class="row m-0"
-                            style="font-family: 'Montserrat', sans-serif; font-size: 13px"
-                    >
-                        <p>Dribble : &nbsp;</p>
-                        <a href="#" target="_blank">www.dribble.com/firstname</a>
-                    </div>
+                <div style="margin-top: 5px" align="center">
+                    <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse; border-spacing: 0px" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 5.0pt 15.0pt 0in 15.0pt; -webkit-box-shadow: 8px 10px 15px -9px rgb(205 205 205 / 75%); -moz-box-shadow: 8px 10px 15px -9px rgba(0,0,0,0.75); box-shadow: 8px 10px 15px -9px rgb(183 182 182 / 75%)">
+                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 420.0pt; padding: 0in 0in 0in 0in" valign="top" width="560">
+                                                            <div align="center">
+                                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="text-align: center">
+                                                                            <h1 style="display: inline-block; padding: 10pt 25pt; color: black; font-size: 20px; margin-bottom: 0">Business Card Management Application</h1>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr style="text-align: center">
+                                                                        <td style="padding: 7.5pt 7.5pt 7.5pt 7.5pt"><a href="https://www.youtube.com/watch?v=Z-G8sL-FGNI&amp;t=1s" rel="noreferrer" target="_blank"> <img id="v1v1v1v1v1m_7314574281816980602m_-3255166610050118017_x0000_i1035" class="v1v1v1v1v1CToWUd" src="https://breakwick.com/email-template/sky-cards%20video.jpg" alt="alt" width="315" height="189" border="0"> </a>
+                                                                            <p><a style="text-decoration: none; color: black" href="https://www.youtube.com/watch?v=Z-G8sL-FGNI&amp;t=1s" rel="noreferrer" target="_blank">Play Video</a></p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="follow pb-5 mt-5">
-    <h6
-            style="
-          line-height: 1;
-          font-family: 'Montserrat', sans-serif;
-          text-align: center;
-          color: #1b9dfd;
-        "
-    >
-        Follow me
-    </h6>
-
-    <div class="row" style="margin: 25px auto 0px auto; max-width: 200px">
-        <a
-                style="
-            margin: auto;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-          "
-                href="#"
-        ><i
-                    style="color: #3b5998; font-size: 25px"
-                    class="fab fa-facebook-square m-auto"
-            ></i
-            ></a>
-
-        <a
-                style="
-            margin: auto;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-          "
-                href="#"
-        ><i
-                    style="color: #00acee; font-size: 25px"
-                    class="fab fa-twitter m-auto"
-            ></i
-            ></a>
-
-        <a
-                style="
-            margin: auto;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-          "
-                href="#"
-        ><i
-                    style="color: #0072b1; font-size: 25px"
-                    class="fab fa-linkedin m-auto"
-            ></i
-            ></a>
-
-        <a
-                style="
-            margin: auto;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-          "
-                href="#"
-        ><i
-                    style="color: #000; font-size: 25px"
-                    class="fab fa-instagram m-auto"
-            ></i
-            ></a>
-    </div>
-</div>
-
-<div class="powerd pb-2">
-    <p
-            style="
-          font-family: 'Montserrat', sans-serif;
-          text-align: center;
-          color: #017b8d;
-          font-size: 12px;
-          line-height: 1;
-          margin: 0 0 8px 0;
-        "
-    >
-        Powered by <a href="http://skycards.lk/"> Sky Cards </a>
-    </p>
-    <p
-            style="
-        margin-top: 17px;
-          font-family: 'Montserrat', sans-serif;
-          text-align: center;
-          color: #ff8a45;
-          font-size: 10px;
-        "
-    >
-        Your Digital Business Card Companion <br>
-        <a href="http://skycards.lk/" style="font-weight: 800;text-transform: uppercase;color: #ff8a45;"> Get yours today </a>
-    </p>
-</div>
-
-
-<div style="bottom: 0;width: 100%;">
-    <img style="width: 100%;" src="http://thechaptersrilanka.com/images/Mask%20Group%2038.png" alt="">
+                <div style="margin-top: 5px" align="center">
+                    <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse; border-spacing: 0px" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 0pt 15.0pt 0in 15.0pt; -webkit-box-shadow: 8px 10px 15px -9px rgb(205 205 205 / 75%); -moz-box-shadow: 8px 10px 15px -9px rgba(0,0,0,0.75); box-shadow: 8px 10px 15px -9px rgb(183 182 182 / 75%)">
+                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 420.0pt; padding: 0in 0in 0in 0in" valign="top" width="560">
+                                                            <div align="center">
+                                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="padding: 3.75pt 3.75pt 3.75pt 3.75pt; text-align: center">
+                                                                            <p style="display: inline-block; padding: 10pt 25pt; color: black; font-size: 20px; margin-bottom: 0; margin-top: 20px">Presentation Deck</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div align="center">
+                    <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse; border-spacing: 0px" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 15.0pt 15.0pt 20.0pt 15.0pt; -webkit-box-shadow: 8px 10px 15px -9px rgb(205 205 205 / 75%); -moz-box-shadow: 8px 10px 15px -9px rgba(0,0,0,0.75); box-shadow: 8px 10px 15px -9px rgb(183 182 182 / 75%)">
+                                                <table style="width: 100%; border-spacing: 0px; float: left" border="0" width="600" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 220pt; padding: 0in 0in 0in 0in" valign="top" width="270">
+                                                            <table style="border-collapse: collapse; border-spacing: 0px" border="0" cellspacing="0" cellpadding="0" align="left">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td style="width: 220pt; padding: 0in 0in 0in 0in" width="270">
+                                                                        <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px; background-color: white" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td style="padding: 0in 0pt 0in 0pt">
+                                                                                    <p class="v1v1v1v1v1MsoNormal" style="padding: 13pt; text-align: center; background-color: white; margin: 0" align="center"><a href="https://drive.google.com/file/d/1IqWfzbiHFiD-bAA1QGKZzYKSX9mo63qZ/view?usp=sharing" rel="noreferrer" target="_blank"><img id="v1v1v1v1v1m_7314574281816980602m_-3255166610050118017_x0000_i1030" class="v1v1v1v1v1CToWUd" style="height: 2in; width: 100%" src="https://breakwick.com/email-template/presentation-1.jpg" alt="alt" border="0"></a></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="padding: 0in 0in 0.3in 0in">
+                                                                                    <p style="margin: 0in; text-align: center; line-height: 14.25pt" align="center"><strong><span style="font-size: 12.0pt; color: #333333">SkyCards Brochure</span></strong> <span style="font-size: 12.0pt; font-family: Roboto; color: #333333"><u></u><u></u></span></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td style="width: 15.0pt; padding: 0in 0in 0in 0in" width="20">&nbsp;</td>
+                                                        <td style="width: 220pt; padding: 0in 0in 0in 0in" valign="top" width="270">
+                                                            <table style="border-collapse: collapse; border-spacing: 0px; float: right" border="0" cellspacing="0" cellpadding="0" align="right">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td style="width: 220pt; padding: 0in 0in 0in 0in" width="270">
+                                                                        <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px; background-color: white" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td style="padding: 0in 0pt 0in 0pt">
+                                                                                    <p class="v1v1v1v1v1MsoNormal" style="padding: 13pt; text-align: center; margin: 0" align="center"><a href="https://drive.google.com/file/d/1hza4h-QJ--h_2GwY-uHXGLW4izCG8_3a/view?usp=sharing" rel="noreferrer" target="_blank"><img id="v1v1v1v1v1m_7314574281816980602m_-3255166610050118017_x0000_i1030" class="v1v1v1v1v1CToWUd" style="height: 2in; width: 100%" src="https://breakwick.com/email-template/presentation-2.jpg" alt="alt" border="0"></a></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="padding: 0in 0in 0.3in 0in">
+                                                                                    <p style="margin: 0in; text-align: center; line-height: 14.25pt" align="center"><strong><span style="font-size: 12.0pt; color: #333333">SkyCards Elite - CRM</span></strong> <span style="font-size: 12.0pt; font-family: Roboto; color: #333333"><u></u><u></u></span></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-top: 5px" align="center">
+                    <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse; border-spacing: 0px" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 0pt 15.0pt 20pt 15.0pt; -webkit-box-shadow: 8px 10px 15px -9px rgb(205 205 205 / 75%); -moz-box-shadow: 8px 10px 15px -9px rgba(0,0,0,0.75); box-shadow: 8px 10px 15px -9px rgb(183 182 182 / 75%)">
+                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 420.0pt; padding: 0in 0in 0in 0.15in" valign="top" width="560">
+                                                            <div align="center">
+                                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="padding: 30pt 0pt 0pt 0pt">
+                                                                            <p>I’m more than happy to arrange a demo to explain you how effectively Sky Cards can help your business. Please let us know the time convenient for you at your earliest.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding: 15pt 0pt 0pt 0pt">
+                                                                            <p style="margin: 0">Kind Regards,</p>
+                                                                            <p style="margin: 0">K. Ramanayake</p>
+                                                                            <p style="margin: 0">Director Marketing | Sky Cards</p>
+                                                                            <p style="margin: 0">voice: 0777009990 | dm@skycards.lk</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div align="center">
+                    <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding: 0in 0in 0in 0in">
+                                <div align="center">
+                                    <table style="width: 7in; background: #f6f6f6; border-collapse: collapse; border-spacing: 0px" border="0" width="600" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding: 0pt 0pt 0in 0pt; background-color: #53b5ed">
+                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 420.0pt; padding: 0in 0in 0in 0.15in" valign="top" width="560">
+                                                            <div align="center">
+                                                                <table style="width: 100.0%; border-collapse: collapse; border-spacing: 0px" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="padding: 8pt 0pt 8pt 0pt; text-align: center">
+                                                                            <p style="margin: 0; font-size: 20px; font-weight: 500"><span style="color: #ffffff"><a style="color: #ffffff" href="https://skycards.lk/" rel="noreferrer" target="_blank">www.skycards.lk</a></span></p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>&nbsp;</div>
 </div>
