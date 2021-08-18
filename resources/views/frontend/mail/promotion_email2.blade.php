@@ -341,7 +341,7 @@
                         <!-- CTA -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffffF">
                             <tbody><tr>
-                                <td class="p30-15" style="padding: 50px 30px;padding-bottom: 0px;">
+                                <td class="p30-15" style="padding: 50px 30px;">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tbody><tr>
                                             <td class="h2 white center pb20" style="font-family:'Roboto', Arial,sans-serif;font-size: 17px;line-height:34px;color: #000000;padding-bottom:20px;">
@@ -425,7 +425,7 @@
                                         <tr style="
     background-color: #2196f3;
 ">
-                                            <td class="text-footer1 pb10" style="color: #ffffff;font-family:'Roboto', Arial,sans-serif;font-size:16px;line-height:20px;text-align:center;padding-bottom:10px;padding-top: 20px;padding-bottom: 20px;"><a href="#" style="
+                                            <td class="text-footer1 pb10" style="color: #ffffff;font-family:'Roboto', Arial,sans-serif;font-size:16px;line-height:20px;text-align:center;padding-bottom:10px;padding-top: 20px;padding-bottom: 20px;"><a href="https://skycards.lk/" style="
     color: white;
 ">www.skycards.lk</a></td>
                                         </tr>
@@ -433,7 +433,7 @@
                                             <td class="text-footer2 pb30" style="color:#999999; font-family:'Roboto', Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;"></td>
                                         </tr>
                                         <tr>
-                                            <td class="text-footer3" style="color:#c0c0c0; font-family:'Roboto', Arial,sans-serif; font-size:12px; line-height:18px; text-align:center;"><div mc:edit="text_37"><a class="link3-u" target="_blank" href="file:///C:/Users/DELL/AppData/Local/Temp/Rar$EXa16404.31605/surreal-estate-free-html-email-template/mailchimp/*%7CUNSUB%7C*" style="color:#c0c0c0; text-decoration:underline;">Unsubscribe</a></div> from this mailing list.</td>
+
                                         </tr>
                                         <tr>
                                             <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
