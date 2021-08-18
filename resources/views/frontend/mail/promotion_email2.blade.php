@@ -359,7 +359,7 @@
     padding-top: 50px;
 ">
                                                     <p style="margin:0">Kind Regards,</p>
-                                                    <p style="margin:0">Pavani Manage</p>
+                                                    <p style="margin:0">Pavani Marage</p>
                                                     <p style="margin:0">Business Development Executive | Sky Cards</p>
                                                     <p style="margin:0">voice: 0762942045  |  <a href="mailto:pavani@skycards.lk" target="_blank">pavani@skycards.lk</a></p>
                                                 </div><p></p></td>
