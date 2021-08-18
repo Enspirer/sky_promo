@@ -406,7 +406,7 @@
                         <!-- Footer -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody><tr>
-                                <td class="p30-15" style="padding: 50px 30px;" bgcolor="#ffffff">
+                                <td class="p30-15" style="padding:50px 30px;padding-top: 10px;" bgcolor="#ffffff">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tbody><tr>
                                             <td align="center" style="padding-bottom: 30px;">
