@@ -99,35 +99,7 @@
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="
     background-color: white;
 ">
-                                        <tbody><tr>
-                                            <th class="column-top" width="145" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                    <tbody><tr>
-                                                        <td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
-                                                    </tr>
-                                                    </tbody></table>
-                                            </th>
-                                            <th class="column-empty" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
-                                            <th class="column" style="font-size:0pt;line-height:0pt;padding:0;margin:0;font-weight:normal;">
-                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="
-    /* margin-top: 80px; */
-    /* margin-left: -180px; */
-">
-                                                    <tbody style=""><tr>
-                                                        <td class="text-header" style="color:#999999;font-family:'Roboto', Arial,sans-serif;font-size:12px;line-height:16px;text-align: right;text-transform:uppercase;"><div mc:edit="text_1"><img src="https://skycards.lk/light_theme/assets/logo%20compressed.png" width="100" height="100" mc:edit="image_1" style="
-    padding-top: 61px;
-" border="0" alt=""></div></td>
-                                                    </tr>
-                                                    </tbody></table>
-                                            </th><th class="column-top" width="145" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                    <tbody><tr>
-                                                        <td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
-                                                    </tr>
-                                                    </tbody></table>
-                                            </th>
-                                        </tr>
-                                        </tbody></table>
+                                    </table>
                                 </td>
                             </tr>
                             </tbody></table>
@@ -450,8 +422,12 @@
 
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="text-footer1 pb10" style="color:#999999; font-family:'Roboto', Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;"><a mc:edit="text_35">www.skycards.lk</a></td>
+                                        <tr style="
+    background-color: #2196f3;
+">
+                                            <td class="text-footer1 pb10" style="color: #ffffff;font-family:'Roboto', Arial,sans-serif;font-size:16px;line-height:20px;text-align:center;padding-bottom:10px;padding-top: 20px;padding-bottom: 20px;"><a href="#" style="
+    color: white;
+">www.skycards.lk</a></td>
                                         </tr>
                                         <tr>
                                             <td class="text-footer2 pb30" style="color:#999999; font-family:'Roboto', Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;"></td>
