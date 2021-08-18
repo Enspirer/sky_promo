@@ -341,7 +341,7 @@
                         <!-- CTA -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffffF">
                             <tbody><tr>
-                                <td class="p30-15" style="padding: 50px 30px;">
+                                <td class="p30-15" style="padding: 50px 30px;padding-bottom: 0px;">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tbody><tr>
                                             <td class="h2 white center pb20" style="font-family:'Roboto', Arial,sans-serif;font-size: 17px;line-height:34px;color: #000000;padding-bottom:20px;">
